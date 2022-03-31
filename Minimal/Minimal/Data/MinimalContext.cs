@@ -15,5 +15,11 @@ namespace Minimal.Data
         }
 
         public DbSet<Minimal.Models.CATEGORIA> CATEGORIA { get; set; }
+
+        public DbSet<Minimal.Models.ENVIO> ENVIO { get; set; }
+
+        public DbSet<Minimal.Models.TIPO_PAGO> TIPO_PAGO { get; set; }
+
+        public DbSet<Minimal.Models.CLIENTE> CLIENTE { get; set; }
     }
 }

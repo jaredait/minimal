@@ -148,3 +148,13 @@ C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Categoria\Details.cshtml.g.cs
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Categoria\Edit.cshtml.g.cs
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Categoria\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Envio\Create.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Envio\Delete.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Envio\Details.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Envio\Edit.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Envio\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Tipo_Pago\Create.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Tipo_Pago\Delete.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Tipo_Pago\Details.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Tipo_Pago\Edit.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Tipo_Pago\Index.cshtml.g.cs
