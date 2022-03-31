@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ErsOsln9itNX4gNby1wVc8u+AZCcZ+K9nJoUQOUlbsoMtw1axFZQk5TAPdbxI8Gl1FZQKf/5g013HVkG1mrkRw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ASUS\\source\\repos\\minimal\\Minimal\\Minimal\\Minimal.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
