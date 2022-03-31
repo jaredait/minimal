@@ -1,0 +1,54 @@
+﻿@page
+@model Minimal.Pages.Categoria.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CATEGORIA</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CATEGORIA.CAT_ID" class="control-label"></label>
+                <input asp-for="CATEGORIA.CAT_ID" class="form-control" />
+                <span asp-validation-for="CATEGORIA.CAT_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CATEGORIA.CAT_NOMBRE" class="control-label"></label>
+                <input asp-for="CATEGORIA.CAT_NOMBRE" class="form-control" />
+                <span asp-validation-for="CATEGORIA.CAT_NOMBRE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CATEGORIA.CAT_DESCRIPCION" class="control-label"></label>
+                <input asp-for="CATEGORIA.CAT_DESCRIPCION" class="form-control" />
+                <span asp-validation-for="CATEGORIA.CAT_DESCRIPCION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CATEGORIA.CAT_MINIATURA" class="control-label"></label>
+                <input asp-for="CATEGORIA.CAT_MINIATURA" class="form-control" />
+                <span asp-validation-for="CATEGORIA.CAT_MINIATURA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CATEGORIA.CAT_RUTA_IMAGEN" class="control-label"></label>
+                <input asp-for="CATEGORIA.CAT_RUTA_IMAGEN" class="form-control" />
+                <span asp-validation-for="CATEGORIA.CAT_RUTA_IMAGEN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
