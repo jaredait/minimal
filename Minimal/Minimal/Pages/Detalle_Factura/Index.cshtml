@@ -1,0 +1,48 @@
+﻿@page
+@model Minimal.Pages.Detalle_Factura.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DETALLE_FACTURA[0].FAC_NUMERO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DETALLE_FACTURA[0].DET_PRECIO_PRD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DETALLE_FACTURA[0].DET_CANTIDAD)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.DETALLE_FACTURA) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FAC_NUMERO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DET_PRECIO_PRD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DET_CANTIDAD)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.PRD_ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.PRD_ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PRD_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,70 @@
+﻿@page
+@model Minimal.Pages.Factura.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>FACTURA</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="FACTURA.FAC_NUMERO" />
+            <div class="form-group">
+                <label asp-for="FACTURA.CLI_USUARIO" class="control-label"></label>
+                <input asp-for="FACTURA.CLI_USUARIO" class="form-control" />
+                <span asp-validation-for="FACTURA.CLI_USUARIO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FACTURA.TIP_ID" class="control-label"></label>
+                <input asp-for="FACTURA.TIP_ID" class="form-control" />
+                <span asp-validation-for="FACTURA.TIP_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FACTURA.ENV_NUMERO" class="control-label"></label>
+                <input asp-for="FACTURA.ENV_NUMERO" class="form-control" />
+                <span asp-validation-for="FACTURA.ENV_NUMERO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FACTURA.FAC_FECHA" class="control-label"></label>
+                <input asp-for="FACTURA.FAC_FECHA" class="form-control" />
+                <span asp-validation-for="FACTURA.FAC_FECHA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FACTURA.FAC_DIRECCION_CLI" class="control-label"></label>
+                <input asp-for="FACTURA.FAC_DIRECCION_CLI" class="form-control" />
+                <span asp-validation-for="FACTURA.FAC_DIRECCION_CLI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FACTURA.FAC_EMAIL_CLI" class="control-label"></label>
+                <input asp-for="FACTURA.FAC_EMAIL_CLI" class="form-control" />
+                <span asp-validation-for="FACTURA.FAC_EMAIL_CLI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FACTURA.FAC_MONTO_SUBTOTAL" class="control-label"></label>
+                <input asp-for="FACTURA.FAC_MONTO_SUBTOTAL" class="form-control" />
+                <span asp-validation-for="FACTURA.FAC_MONTO_SUBTOTAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FACTURA.FAC_MONTO_TOTAL" class="control-label"></label>
+                <input asp-for="FACTURA.FAC_MONTO_TOTAL" class="form-control" />
+                <span asp-validation-for="FACTURA.FAC_MONTO_TOTAL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,67 @@
+﻿@page
+@model Minimal.Pages.Factura.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>FACTURA</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FACTURA.CLI_USUARIO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FACTURA.CLI_USUARIO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FACTURA.TIP_ID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FACTURA.TIP_ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FACTURA.ENV_NUMERO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FACTURA.ENV_NUMERO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FACTURA.FAC_FECHA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FACTURA.FAC_FECHA)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FACTURA.FAC_DIRECCION_CLI)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FACTURA.FAC_DIRECCION_CLI)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FACTURA.FAC_EMAIL_CLI)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FACTURA.FAC_EMAIL_CLI)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FACTURA.FAC_MONTO_SUBTOTAL)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FACTURA.FAC_MONTO_SUBTOTAL)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FACTURA.FAC_MONTO_TOTAL)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FACTURA.FAC_MONTO_TOTAL)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.FACTURA.FAC_NUMERO">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

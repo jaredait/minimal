@@ -1,0 +1,74 @@
+﻿@page
+@model Minimal.Pages.Producto.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>PRODUCTO</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PRODUCTO.PRD_ID" class="control-label"></label>
+                <input asp-for="PRODUCTO.PRD_ID" class="form-control" />
+                <span asp-validation-for="PRODUCTO.PRD_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PRODUCTO.PRD_NOMBRE" class="control-label"></label>
+                <input asp-for="PRODUCTO.PRD_NOMBRE" class="form-control" />
+                <span asp-validation-for="PRODUCTO.PRD_NOMBRE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PRODUCTO.PRD_PRECIO" class="control-label"></label>
+                <input asp-for="PRODUCTO.PRD_PRECIO" class="form-control" />
+                <span asp-validation-for="PRODUCTO.PRD_PRECIO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PRODUCTO.PRD_PESO" class="control-label"></label>
+                <input asp-for="PRODUCTO.PRD_PESO" class="form-control" />
+                <span asp-validation-for="PRODUCTO.PRD_PESO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PRODUCTO.PRD_DESCRIPCION" class="control-label"></label>
+                <input asp-for="PRODUCTO.PRD_DESCRIPCION" class="form-control" />
+                <span asp-validation-for="PRODUCTO.PRD_DESCRIPCION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PRODUCTO.PRD_MINIATURA" class="control-label"></label>
+                <input asp-for="PRODUCTO.PRD_MINIATURA" class="form-control" />
+                <span asp-validation-for="PRODUCTO.PRD_MINIATURA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PRODUCTO.PRD_RUTA_IMAGEN" class="control-label"></label>
+                <input asp-for="PRODUCTO.PRD_RUTA_IMAGEN" class="form-control" />
+                <span asp-validation-for="PRODUCTO.PRD_RUTA_IMAGEN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PRODUCTO.PRD_FECHA_CREACION" class="control-label"></label>
+                <input asp-for="PRODUCTO.PRD_FECHA_CREACION" class="form-control" />
+                <span asp-validation-for="PRODUCTO.PRD_FECHA_CREACION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PRODUCTO.PRD_STOCK" class="control-label"></label>
+                <input asp-for="PRODUCTO.PRD_STOCK" class="form-control" />
+                <span asp-validation-for="PRODUCTO.PRD_STOCK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

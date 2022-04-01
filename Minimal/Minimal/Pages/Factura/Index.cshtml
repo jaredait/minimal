@@ -1,0 +1,78 @@
+﻿@page
+@model Minimal.Pages.Factura.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FACTURA[0].CLI_USUARIO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FACTURA[0].TIP_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FACTURA[0].ENV_NUMERO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FACTURA[0].FAC_FECHA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FACTURA[0].FAC_DIRECCION_CLI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FACTURA[0].FAC_EMAIL_CLI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FACTURA[0].FAC_MONTO_SUBTOTAL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FACTURA[0].FAC_MONTO_TOTAL)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.FACTURA) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLI_USUARIO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TIP_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ENV_NUMERO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FAC_FECHA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FAC_DIRECCION_CLI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FAC_EMAIL_CLI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FAC_MONTO_SUBTOTAL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FAC_MONTO_TOTAL)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.FAC_NUMERO">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.FAC_NUMERO">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.FAC_NUMERO">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
