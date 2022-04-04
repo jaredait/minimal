@@ -12,7 +12,6 @@ create table CATEGORIA (
    CAT_ID               varchar(15)          not null,
    CAT_NOMBRE           varchar(50)          not null,
    CAT_DESCRIPCION      varchar(250)         null,
-   CAT_MINIATURA        varbinary(8000)      null,
    CAT_RUTA_IMAGEN      varchar(250)         null,
    constraint PK_CATEGORIA primary key (CAT_ID)
 )
@@ -175,7 +174,6 @@ create table PRODUCTO (
    PRD_PRECIO           decimal(9,2)         not null,
    PRD_PESO             decimal(9,2)         null,
    PRD_DESCRIPCION      varchar(100)         null,
-   PRD_MINIATURA        binary(8000)         null,
    PRD_RUTA_IMAGEN      varchar(250)         null,
    PRD_FECHA_CREACION   datetime             null,
    PRD_STOCK            int                  null default 0

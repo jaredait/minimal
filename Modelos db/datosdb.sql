@@ -1,28 +1,28 @@
 /* INSERTAR CATEGORIAS */
 
-INSERT INTO CATEGORIA VALUES('CAMREG', 'Camiseta', 'Camisetas regulares cuello redondo', 0x222222, 'imagen');
-INSERT INTO CATEGORIA VALUES('CAMPOL', 'Polo', 'Camisetas polo', 0x222222, 'imagen');
-INSERT INTO CATEGORIA VALUES('PANTJEAN', 'Jean', 'Pantalones Jeans - Vaqueros', 0x222222, 'imagen');
-INSERT INTO CATEGORIA VALUES('PANTCHI', 'Chino', 'Pantalones Chinos', 0x222222, 'imagen');
-INSERT INTO CATEGORIA VALUES('PANTCARG', 'Cargo', 'Pantalones cargo', 0x222222, 'imagen');
-INSERT INTO CATEGORIA VALUES('PANTVEST', 'Vestir', 'Pantalones de vestir', 0x222222, 'imagen');
-INSERT INTO CATEGORIA VALUES('ZAPTEN', 'Tennis', 'Tennis', 0x222222, 'imagen');
-INSERT INTO CATEGORIA VALUES('ZAPDEP', 'Deportivo', 'Zapatos deportivos', 0x222222, 'imagen');
-INSERT INTO CATEGORIA VALUES('MED', 'Medias', 'Medias', 0x222222, 'imagen');
-INSERT INTO CATEGORIA VALUES('GAF', 'Lentes de Sol', 'Lentes de sol', 0x222222, 'imagen');
+INSERT INTO CATEGORIA VALUES('CAMREG', 'Camiseta', 'Camisetas regulares cuello redondo', 'imagen');
+INSERT INTO CATEGORIA VALUES('CAMPOL', 'Polo', 'Camisetas polo', 'imagen');
+INSERT INTO CATEGORIA VALUES('PANTJEAN', 'Jean', 'Pantalones Jeans - Vaqueros', 'imagen');
+INSERT INTO CATEGORIA VALUES('PANTCHI', 'Chino', 'Pantalones Chinos', 'imagen');
+INSERT INTO CATEGORIA VALUES('PANTCARG', 'Cargo', 'Pantalones cargo', 'imagen');
+INSERT INTO CATEGORIA VALUES('PANTVEST', 'Vestir', 'Pantalones de vestir', 'imagen');
+INSERT INTO CATEGORIA VALUES('ZAPTEN', 'Tennis', 'Tennis', 'imagen');
+INSERT INTO CATEGORIA VALUES('ZAPDEP', 'Deportivo', 'Zapatos deportivos', 'imagen');
+INSERT INTO CATEGORIA VALUES('MED', 'Medias', 'Medias', 'imagen');
+INSERT INTO CATEGORIA VALUES('GAF', 'Lentes de Sol', 'Lentes de sol', 'imagen');
 
 /* INSERTAR PRODUCTOS */
 
-INSERT INTO PRODUCTO VALUES('CAMNEGM', 'Camiseta', 15.99, 100, 'Camiseta negra talla M', 0x222222, 'imagen', '2022-04-03', 100);
-INSERT INTO PRODUCTO VALUES('POLCELS', 'Polo', 24.99, 200, 'Polo celeste talla S', 0x222222, 'imagen', '2022-04-03', 55);
-INSERT INTO PRODUCTO VALUES('JEANAZU38', 'Jean', 45.99, 700, 'Jean azul talla 38', 0x222222, 'imagen', '2022-04-03', 95);
-INSERT INTO PRODUCTO VALUES('CHIVERO36', 'Chino', 39.99, 700, 'Chino verde olivo talla 36', 0x222222, 'imagen', '2022-04-03', 75);
-INSERT INTO PRODUCTO VALUES('CARGBEI38', 'Cargo', 49.99, 700, 'Cargo beige talla 38', 0x222222, 'imagen', '2022-04-03', 62);
-INSERT INTO PRODUCTO VALUES('PANTVESTGRI40', 'Vestir', 44.99, 400, 'Pantalon de vestir gris talla 40', 0x222222, 'imagen', '2022-04-03', 55);
-INSERT INTO PRODUCTO VALUES('TENBLA8', 'Tennis', 59.99, 300, 'Tennis blanco talla 8', 0x222222, 'imagen', '2022-04-03', 50);
-INSERT INTO PRODUCTO VALUES('DEPNEG8', 'Deportivo', 44.99, 400, 'Zapatos deportivos negros talla 8', 0x222222, 'imagen', '2022-04-03', 45);
-INSERT INTO PRODUCTO VALUES('MEDROJ1012', 'Medias', 9.99, 50, 'Medias rojas talla 10-12', 0x222222, 'imagen', '2022-04-03', 74);
-INSERT INTO PRODUCTO VALUES('GAFCAF', 'Lentes de sol', 39.99, 8, 'Lentes de sol cafes', 0x222222, 'imagen', '2022-04-03', 45);
+INSERT INTO PRODUCTO VALUES('CAMNEGM', 'Camiseta', 15.99, 100, 'Camiseta negra talla M', 'imagen', '2022-04-03', 100);
+INSERT INTO PRODUCTO VALUES('POLCELS', 'Polo', 24.99, 200, 'Polo celeste talla S', 'imagen', '2022-04-03', 55);
+INSERT INTO PRODUCTO VALUES('JEANAZU38', 'Jean', 45.99, 700, 'Jean azul talla 38', 'imagen', '2022-04-03', 95);
+INSERT INTO PRODUCTO VALUES('CHIVERO36', 'Chino', 39.99, 700, 'Chino verde olivo talla 36', 'imagen', '2022-04-03', 75);
+INSERT INTO PRODUCTO VALUES('CARGBEI38', 'Cargo', 49.99, 700, 'Cargo beige talla 38', 'imagen', '2022-04-03', 62);
+INSERT INTO PRODUCTO VALUES('PANTVESTGRI40', 'Vestir', 44.99, 400, 'Pantalon de vestir gris talla 40', 'imagen', '2022-04-03', 55);
+INSERT INTO PRODUCTO VALUES('TENBLA8', 'Tennis', 59.99, 300, 'Tennis blanco talla 8', 'imagen', '2022-04-03', 50);
+INSERT INTO PRODUCTO VALUES('DEPNEG8', 'Deportivo', 44.99, 400, 'Zapatos deportivos negros talla 8', 'imagen', '2022-04-03', 45);
+INSERT INTO PRODUCTO VALUES('MEDROJ1012', 'Medias', 9.99, 50, 'Medias rojas talla 10-12', 'imagen', '2022-04-03', 74);
+INSERT INTO PRODUCTO VALUES('GAFCAF', 'Lentes de sol', 39.99, 8, 'Lentes de sol cafes', 'imagen', '2022-04-03', 45);
 
 /* INSERTAR CLIENTES */
 
