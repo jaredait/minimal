@@ -14,6 +14,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.PARAMETROS_GENERALES[0].PAR_NOMBRE)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.PARAMETROS_GENERALES[0].PAR_VALOR)
             </th>
             <th></th>
@@ -22,6 +25,9 @@
     <tbody>
 @foreach (var item in Model.PARAMETROS_GENERALES) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PAR_NOMBRE)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PAR_VALOR)
             </td>

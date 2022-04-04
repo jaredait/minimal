@@ -17,6 +17,9 @@
                 @Html.DisplayNameFor(model => model.PRODUCTO[0].PRD_NOMBRE)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.PRODUCTO[0].PRD_ID)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.PRODUCTO[0].PRD_PRECIO)
             </th>
             <th>
@@ -43,6 +46,9 @@
     <tbody>
 @foreach (var item in Model.PRODUCTO) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRD_ID)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PRD_NOMBRE)
             </td>

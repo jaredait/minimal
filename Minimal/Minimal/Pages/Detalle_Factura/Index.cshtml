@@ -14,6 +14,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.DETALLE_FACTURA[0].PRD_ID)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.DETALLE_FACTURA[0].FAC_NUMERO)
             </th>
             <th>
@@ -28,6 +31,9 @@
     <tbody>
 @foreach (var item in Model.DETALLE_FACTURA) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRD_ID)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.FAC_NUMERO)
             </td>

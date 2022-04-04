@@ -14,6 +14,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.ENVIO[0].ENV_NUMERO)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.ENVIO[0].ENV_DIRECCION)
             </th>
             <th>
@@ -25,6 +28,9 @@
     <tbody>
 @foreach (var item in Model.ENVIO) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ENV_NUMERO)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ENV_DIRECCION)
             </td>
