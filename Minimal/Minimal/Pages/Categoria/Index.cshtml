@@ -14,16 +14,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CATEGORIA[0].CAT_ID)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.CATEGORIA[0].CAT_NOMBRE)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CATEGORIA[0].CAT_DESCRIPCION)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CATEGORIA[0].CAT_MINIATURA)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CATEGORIA[0].CAT_RUTA_IMAGEN)
@@ -35,16 +29,10 @@
 @foreach (var item in Model.CATEGORIA) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.CAT_ID)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.CAT_NOMBRE)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CAT_DESCRIPCION)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CAT_MINIATURA)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CAT_RUTA_IMAGEN)

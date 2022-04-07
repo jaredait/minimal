@@ -143,11 +143,6 @@ C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Minimal.dll
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\ref\Minimal.dll
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Minimal.pdb
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Minimal.genruntimeconfig.cache
-C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Categoria\Create.cshtml.g.cs
-C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Categoria\Delete.cshtml.g.cs
-C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Categoria\Details.cshtml.g.cs
-C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Categoria\Edit.cshtml.g.cs
-C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Categoria\Index.cshtml.g.cs
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Envio\Create.cshtml.g.cs
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Envio\Delete.cshtml.g.cs
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Envio\Details.cshtml.g.cs
@@ -163,11 +158,6 @@ C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Cliente\Details.cshtml.g.cs
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Cliente\Edit.cshtml.g.cs
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Cliente\Index.cshtml.g.cs
-C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Producto\Create.cshtml.g.cs
-C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Producto\Delete.cshtml.g.cs
-C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Producto\Details.cshtml.g.cs
-C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Producto\Edit.cshtml.g.cs
-C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Producto\Index.cshtml.g.cs
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Factura\Create.cshtml.g.cs
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Factura\Delete.cshtml.g.cs
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Factura\Details.cshtml.g.cs
@@ -188,3 +178,13 @@ C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Parametros_Generales\Details.cshtml.g.cs
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Parametros_Generales\Edit.cshtml.g.cs
 C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Parametros_Generales\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Categoria\Create.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Categoria\Delete.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Categoria\Details.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Categoria\Edit.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Categoria\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Producto\Create.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Producto\Delete.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Producto\Details.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Producto\Edit.cshtml.g.cs
+C:\Users\ASUS\source\repos\minimal\Minimal\Minimal\obj\Debug\net5.0\Razor\Pages\Producto\Index.cshtml.g.cs
