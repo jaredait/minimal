@@ -1,0 +1,51 @@
+﻿@page
+@model Minimal_Cliente.Pages.LogIn.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>MINIMAL</h1>
+
+<div class="container at-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="ab-3">INICIA SESIÓN</h1>
+            <form method="post">
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Credencial.Usuario">Usuario</label>
+                    <input type="text" asp-for="Credencial.Usuario" class="form-control" />
+                    <span asp-validation-for="Credencial.Usuario" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-form="Credencial.Contrasena">Contraseña</label>
+                    <input type="password" asp-for="Credencial.Contrasena" class="form-control" />
+                    <span asp-validation-for="Credencial.Contrasena" class="text-danger"></span>
+                </div>
+                <div asp-validation-summary="All" class="text-danger">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="ab-3">REGÍSTRATE</h1>
+            <p>
+                SI TODAVÍA NO TIENES UNA CUENTA DE USUARIO DE MINIMAL UTILIZA ESTA OPCIÓN PARA ACCEDER AL FORMULARIO DE REGISTRO.
+            </p>
+            <p>
+                TE SOLICITAREMOS LA INFORMACIÓN IMPRESCINDIBLE PARA AGILIZAR EL PROCESO DE COMPRA.
+            </p>
+            <form method="post">
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary" asp-page="./Cliente/Create">Crear Cuenta</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>

@@ -15,5 +15,7 @@ namespace Minimal_Cliente.Data
         }
 
         public DbSet<Minimal.Models.PRODUCTO> PRODUCTO { get; set; }
+        public DbSet<Minimal.Models.CLIENTE> CLIENTE { get; set; }
+
     }
 }

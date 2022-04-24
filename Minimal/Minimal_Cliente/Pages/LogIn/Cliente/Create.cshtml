@@ -1,0 +1,89 @@
+﻿@page
+@model Minimal_Cliente.Pages.LogIn.Cliente.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CLIENTE</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CLIENTE.CLI_USUARIO" class="control-label"></label>
+                <input asp-for="CLIENTE.CLI_USUARIO" class="form-control" />
+                <span asp-validation-for="CLIENTE.CLI_USUARIO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLIENTE.CLI_CONTRASENA" class="control-label"></label>
+                <input asp-for="CLIENTE.CLI_CONTRASENA" class="form-control" />
+                <span asp-validation-for="CLIENTE.CLI_CONTRASENA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLIENTE.CLI_CEDULA_RUC" class="control-label"></label>
+                <input asp-for="CLIENTE.CLI_CEDULA_RUC" class="form-control" />
+                <span asp-validation-for="CLIENTE.CLI_CEDULA_RUC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLIENTE.CLI_EMAIL" class="control-label"></label>
+                <input asp-for="CLIENTE.CLI_EMAIL" class="form-control" />
+                <span asp-validation-for="CLIENTE.CLI_EMAIL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLIENTE.CLI_NOMBRE" class="control-label"></label>
+                <input asp-for="CLIENTE.CLI_NOMBRE" class="form-control" />
+                <span asp-validation-for="CLIENTE.CLI_NOMBRE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLIENTE.CLI_APELLIDO" class="control-label"></label>
+                <input asp-for="CLIENTE.CLI_APELLIDO" class="form-control" />
+                <span asp-validation-for="CLIENTE.CLI_APELLIDO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLIENTE.CLI_EDAD" class="control-label"></label>
+                <input asp-for="CLIENTE.CLI_EDAD" class="form-control" />
+                <span asp-validation-for="CLIENTE.CLI_EDAD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLIENTE.CLI_SEXO" class="control-label"></label>
+                <input asp-for="CLIENTE.CLI_SEXO" class="form-control" />
+                <span asp-validation-for="CLIENTE.CLI_SEXO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLIENTE.CLI_DIRECCION" class="control-label"></label>
+                <input asp-for="CLIENTE.CLI_DIRECCION" class="form-control" />
+                <span asp-validation-for="CLIENTE.CLI_DIRECCION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLIENTE.CLI_CIUDAD" class="control-label"></label>
+                <input asp-for="CLIENTE.CLI_CIUDAD" class="form-control" />
+                <span asp-validation-for="CLIENTE.CLI_CIUDAD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLIENTE.CLI_PROVINCIA" class="control-label"></label>
+                <input asp-for="CLIENTE.CLI_PROVINCIA" class="form-control" />
+                <span asp-validation-for="CLIENTE.CLI_PROVINCIA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CLIENTE.CLI_TELEFONO" class="control-label"></label>
+                <input asp-for="CLIENTE.CLI_TELEFONO" class="form-control" />
+                <span asp-validation-for="CLIENTE.CLI_TELEFONO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="../Index">Inicio de Sesión</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
