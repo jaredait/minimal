@@ -29,6 +29,7 @@ namespace Minimal_Cliente.Pages.Carrito
         */
         public void OnGet()
         {
+            //Page.ClientScript.RegisterStartupScript(this.GetType(), "Script", "alert('Test Event');", true);
             string[] tempIds = new string[] { "DEPNEG8" };
             ListaProductos = (List<PRODUCTO>)productoAccess.getProductosPorId(tempIds);
         }
