@@ -13,16 +13,16 @@ INSERT INTO CATEGORIA VALUES('GAF', 'Lentes de Sol', 'Lentes de sol', 'imagen');
 
 /* INSERTAR PRODUCTOS */
 
-INSERT INTO PRODUCTO VALUES('CAMNEGM', 'Camiseta', 15.99, 100, 'Camiseta negra talla M', 'imagen', '2022-04-03', 100);
-INSERT INTO PRODUCTO VALUES('POLCELS', 'Polo', 24.99, 200, 'Polo celeste talla S', 'imagen', '2022-04-03', 55);
-INSERT INTO PRODUCTO VALUES('JEANAZU38', 'Jean', 45.99, 700, 'Jean azul talla 38', 'imagen', '2022-04-03', 95);
-INSERT INTO PRODUCTO VALUES('CHIVERO36', 'Chino', 39.99, 700, 'Chino verde olivo talla 36', 'imagen', '2022-04-03', 75);
-INSERT INTO PRODUCTO VALUES('CARGBEI38', 'Cargo', 49.99, 700, 'Cargo beige talla 38', 'imagen', '2022-04-03', 62);
-INSERT INTO PRODUCTO VALUES('PANTVESTGRI40', 'Vestir', 44.99, 400, 'Pantalon de vestir gris talla 40', 'imagen', '2022-04-03', 55);
-INSERT INTO PRODUCTO VALUES('TENBLA8', 'Tennis', 59.99, 300, 'Tennis blanco talla 8', 'imagen', '2022-04-03', 50);
-INSERT INTO PRODUCTO VALUES('DEPNEG8', 'Deportivo', 44.99, 400, 'Zapatos deportivos negros talla 8', 'imagen', '2022-04-03', 45);
-INSERT INTO PRODUCTO VALUES('MEDROJ1012', 'Medias', 9.99, 50, 'Medias rojas talla 10-12', 'imagen', '2022-04-03', 74);
-INSERT INTO PRODUCTO VALUES('GAFCAF', 'Lentes de sol', 39.99, 8, 'Lentes de sol cafes', 'imagen', '2022-04-03', 45);
+INSERT INTO PRODUCTO VALUES('CAMNEGM', 'Camiseta', 15.99, 100, 'Camiseta negra talla M', 'camiseta-negra.jpg', '2022-04-03', 100);
+INSERT INTO PRODUCTO VALUES('POLCELS', 'Polo', 24.99, 200, 'Polo celeste talla S', 'polo-celeste.jpg', '2022-04-03', 55);
+INSERT INTO PRODUCTO VALUES('JEANAZU38', 'Jean', 45.99, 700, 'Jean azul talla 38', 'blue-jean.png', '2022-04-03', 95);
+INSERT INTO PRODUCTO VALUES('CHIVERO36', 'Chino', 39.99, 700, 'Chino verde olivo talla 36', 'chino-verde.jpg', '2022-04-03', 75);
+INSERT INTO PRODUCTO VALUES('CARGBEI38', 'Cargo', 49.99, 700, 'Cargo beige talla 38', 'cargo-beige.jpg', '2022-04-03', 62);
+INSERT INTO PRODUCTO VALUES('PANTVESTGRI40', 'Vestir', 44.99, 400, 'Pantalon de vestir gris talla 40', 'gray-pants.jpg', '2022-04-03', 55);
+INSERT INTO PRODUCTO VALUES('TENBLA8', 'Tennis', 59.99, 300, 'Tennis blanco talla 8', 'white-sneakers.jpg', '2022-04-03', 50);
+INSERT INTO PRODUCTO VALUES('DEPNEG8', 'Deportivo', 44.99, 400, 'Zapatos deportivos negros talla 8', 'nike-air-jordan-1-negras-y-blancas.jpg', '2022-04-03', 45);
+INSERT INTO PRODUCTO VALUES('MEDROJ1012', 'Medias', 9.99, 50, 'Medias rojas talla 10-12', 'red-socks.jpg', '2022-04-03', 74);
+INSERT INTO PRODUCTO VALUES('GAFCAF', 'Lentes de sol', 39.99, 8, 'Lentes de sol cafes', 'brown-sunglasses.jpg', '2022-04-03', 45);
 
 /* INSERTAR CLIENTES */
 

@@ -4,7 +4,7 @@
 // Write your JavaScript code.
 
 function agregarCarrito(element) {
-    getProductosLocalStorage();
+    localStorage.setItem(element.id, "1");
 }
 
 function getProductosLocalStorage() {
@@ -17,4 +17,13 @@ function getProductosLocalStorage() {
     }
 
     return listaProductos;
+}
+
+function hi() {
+    
+}
+
+function almacenarSesion() {
+    let usuario = document.querySelector('#Credencial_Usuario').value;
+    localStorage.setItem('sesionActiva', usuario);
 }
