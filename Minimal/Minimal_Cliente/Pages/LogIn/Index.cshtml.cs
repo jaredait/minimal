@@ -38,9 +38,9 @@ namespace Minimal_Cliente.Pages.LogIn
             string cli_usuario = Credencial.Usuario;
             string cli_contrasena = Credencial.Contrasena;
             cliente = sessionAccess.getClientePorId(cli_usuario , cli_contrasena);
-            if(cliente != null)
+            if (cliente != null)
             {
-                return RedirectToPage("/TiendaProductos/Index");
+                return RedirectToPage("/TiendaProductos/Index", new { miParametro = 99}) ;
             }
             else
             {
@@ -48,72 +48,6 @@ namespace Minimal_Cliente.Pages.LogIn
             }
             return Page();
         }
-        //Inicio de sesion Ximena Caceres
-        /*
-        private readonly Minimal_Cliente.Data.MinimalContext _context;
-
-        public IndexModel(Minimal_Cliente.Data.MinimalContext context)
-        {
-            _context = context;
-        }
-        public IList<CLIENTE> CLIENTE { get; set; }
-
-        public async Task OnGetAsync()
-        {
-            CLIENTE = await _context.CLIENTE.ToListAsync();
-        }
-
-        public void OnGet()
-        {
-        }
-        public async Task<IActionResult> OnPostAsync(string returnURL = null)
-        {
-            if (ModelState.IsValid)
-            {
-                foreach ( item in Credencial)
-                {
-
-                }
-                if (identityResult.Succeeded)
-                {
-                    if (returnURL == null || returnURL == "/")
-                    {
-                        return RedirectToPage("Index");
-                    }
-                    else
-                    {
-                        return RedirectToPage(returnURL);
-                    }
-                }
-                ModelState.AddModelError("", "Usuario o Contraseña Incorrecta");
-            }
-            return Page();
-        }
-        */
-
-        //Registro
-        /*public async Task<IActionResult> OnPostAsync()
-        {
-            if (ModelState.IsValid)
-            {
-                var user = new IdentityUser()
-                {
-                    UserName = Credencial.Usuario,
-                    PasswordHash = Credencial.Contrasena
-                };
-                var result = await userManager.CreateAsync(user, Credencial.Contrasena);
-                if (result.Succeeded)
-                {
-                    await signInManager.SignInAsync(user, false);
-                    return RedirectToPage("Index");
-                }
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError("", error.Description);
-                }
-            }
-            return Page();
-        }*/
     }
     public class Credencial
     {
