@@ -4,6 +4,7 @@ delete from DETALLE_FACTURA;
 delete from CATEGORIA_PRODUCTO;
 delete from FACTURA;
 delete from PARAMETROS_GENERALES;
+delete from CARRITO;
 delete from CLIENTE;
 delete from CATEGORIA;
 delete from ENVIO;

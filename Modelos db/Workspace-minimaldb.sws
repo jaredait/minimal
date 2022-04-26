@@ -4,8 +4,8 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model ID="{E642F1F5-0689-4721-9B1D-946394696014}" Name="minimaldb" Selected="Yes" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="minimaldb.cdm"/>
-		<Model Expanded="Yes" ID="{D795ECB2-4312-4192-BE36-5B5C76B38542}" Name="minimaldb" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="minimaldb.pdm"/>
+		<Model ID="{E642F1F5-0689-4721-9B1D-946394696014}" Name="minimaldb" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="minimaldb.cdm"/>
+		<Model Expanded="Yes" ID="{D795ECB2-4312-4192-BE36-5B5C76B38542}" Name="minimaldb" Selected="Yes" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="minimaldb.pdm"/>
 		<Model ID="{2D2A8753-30EC-45A6-9069-775A856A9C57}" Name="minimaldb" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" URL="minimaldb.ldm"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
