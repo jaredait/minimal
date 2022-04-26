@@ -1,7 +1,15 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿// js de prueba xd
 
-// Write your JavaScript code.
+function alertarProductos() {
+    let productos = [];
+    productos = getProductosLocalStorage();
+
+    console.log(productos);
+}
+
+
+
+// ------------------------------------------------------------------------------------------
 
 function agregarCarrito(element) {
     localStorage.setItem(element.id, "1");
@@ -19,11 +27,15 @@ function getProductosLocalStorage() {
     return listaProductos;
 }
 
-function hi() {
-    
+function cargarEnInput() {
+    document.querySelector('#inputPrueba').value = localStorage.getItem('sesionActiva');
 }
 
 function almacenarSesion() {
     let usuario = document.querySelector('#Credencial_Usuario').value;
     localStorage.setItem('sesionActiva', usuario);
 }
+
+// main
+
+
