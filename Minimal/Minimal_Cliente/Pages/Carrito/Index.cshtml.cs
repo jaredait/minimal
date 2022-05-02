@@ -25,16 +25,10 @@ namespace Minimal_Cliente.Pages.Carrito
 
         public List<PRODUCTO> ListaProductos { get;set; }
         public List<CARRITO> ListaCarrito { get; set; }
-        /*
-        public async Task OnGetAsync()
-        {
-            ListaProductos = await _context.PRODUCTO.ToListAsync();
-        }
-        */
-        public void OnGet()
-        {
-            ListaCarrito = carritoAccess.getProductos("1710218475");
 
+        public void OnGet(string id)
+        {
+            ListaCarrito = carritoAccess.getProductos(id);
         }
     }
 }

@@ -1,9 +1,5 @@
 ﻿// js de prueba xd
 
-function almacenarIdEnForm() {
-    let idUsuario = localStorage.getItem('sesionActiva')
-    document.querySelector('#idUsuario').value = idUsuario;
-}
 
 
 
@@ -35,6 +31,21 @@ function almacenarSesion() {
     localStorage.setItem('sesionActiva', usuario);
 }
 
+function almacenarIdEnForm() {
+    let idUsuario = localStorage.getItem('sesionActiva')
+    document.querySelector('#idUsuario').value = idUsuario;
+}
+
+function obtenerIdUsuario() {
+    return localStorage.getItem('sesionActiva');
+}
+
+function obtenerUsuarioCarrito() {
+    let item = document.querySelector("#boton-carrito-layout");
+    let idUsuario = obtenerIdUsuario();
+
+    item.setAttribute("href", `/Carrito?id=${idUsuario}`);
+}
 // main
 
 
