@@ -1,0 +1,27 @@
+﻿@page
+@model Minimal_Cliente.Pages.Tienda.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<div class="card-columns">
+    @foreach (var producto in Model.listaProductos)
+    {
+        <div class="card" style="width: 18rem;">
+
+            <img class="card-img-top" src=@Url.Content("~/img/" + producto.PRD_RUTA_IMAGEN) alt="Imagen de la tarjeta"
+                 style="width: 100%; max-width: 100px; max-height: 200px;">
+            <div class="card-body">
+                <h5 class="card-title">@producto.PRD_NOMBRE</h5>
+                <p class="card-text">@producto.PRD_PRECIO</p>
+                <div class="btn btn-outline-secondary" id="@producto.PRD_ID">
+                    <a asp-page="./Edit" asp-route-id="@producto.PRD_ID" class="text-decoration-none">Detalles</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

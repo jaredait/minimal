@@ -12,21 +12,30 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Minimal_Cliente</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img src="~/img/minimal-logo-200x200.png" alt="logo minimal" style="max-width: 90px;"/>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/TiendaProductos/Index">Tienda</a>
-                        </li>
+                        <!--
+        <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-page="/TiendaProductos/Index">Tienda</a>
+    </li>
+
+        -->
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Carrito/Index">Carrito</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/LogIn/Index">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Tienda/Index">TIENDA</a>
                         </li>
                     </ul>
                 </div>

@@ -1,10 +1,8 @@
 ﻿// js de prueba xd
 
-function alertarProductos() {
-    let productos = [];
-    productos = getProductosLocalStorage();
-
-    console.log(productos);
+function almacenarIdEnForm() {
+    let idUsuario = localStorage.getItem('sesionActiva')
+    document.querySelector('#idUsuario').value = idUsuario;
 }
 
 
@@ -28,7 +26,8 @@ function getProductosLocalStorage() {
 }
 
 function cargarEnInput() {
-    document.querySelector('#inputPrueba').value = localStorage.getItem('sesionActiva');
+    let texto = localStorage.getItem('sesionActiva')
+    document.querySelector('#productos-local-storage').value = texto;
 }
 
 function almacenarSesion() {

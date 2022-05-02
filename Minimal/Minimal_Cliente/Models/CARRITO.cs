@@ -9,7 +9,7 @@ namespace Minimal_Cliente.Models
     public class CARRITO
     {
         [Key]
-        public string CAR_ID { get; set; }
+        public int CAR_ID { get; set; }
 
         [Required]
         [Display(Name = "Usuario")]

@@ -2,69 +2,42 @@
 @model Minimal_Cliente.Pages.Carrito.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Carrito";
 }
 
 <h1>Index</h1>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
+<input type="text" id="productos-local-storage" />
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ListaProductos[0].PRD_NOMBRE)
+                @Html.DisplayNameFor(model => model.ListaCarrito[0].CAR_ID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ListaProductos[0].PRD_PRECIO)
+                @Html.DisplayNameFor(model => model.ListaCarrito[0].PRD_ID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ListaProductos[0].PRD_PESO)
+                @Html.DisplayNameFor(model => model.ListaCarrito[0].CLI_USUARIO)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ListaProductos[0].PRD_DESCRIPCION)
+                @Html.DisplayNameFor(model => model.ListaCarrito[0].CAR_CANTIDAD)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ListaProductos[0].PRD_RUTA_IMAGEN)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ListaProductos[0].PRD_FECHA_CREACION)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ListaProductos[0].PRD_STOCK)
-            </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.ListaProductos) {
+@foreach (var item in Model.ListaCarrito) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.PRD_NOMBRE)
+                @Html.DisplayFor(modelItem => item.CAR_ID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PRD_PRECIO)
+                @Html.DisplayFor(modelItem => item.PRD_ID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PRD_PESO)
+                @Html.DisplayFor(modelItem => item.CLI_USUARIO)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PRD_DESCRIPCION)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PRD_RUTA_IMAGEN)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PRD_FECHA_CREACION)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PRD_STOCK)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.PRD_ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.PRD_ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.PRD_ID">Delete</a>
+                @Html.DisplayFor(modelItem => item.CAR_CANTIDAD)
             </td>
         </tr>
 }
@@ -73,5 +46,5 @@
 
 <script src="~/js/site.js"></script>
 <script>
-    alertarProductos();
+    document.addEventListener("load", cargarEnInput());
 </script>

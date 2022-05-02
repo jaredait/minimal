@@ -1,0 +1,48 @@
+﻿@page
+@model Minimal_Cliente.Pages.Tienda.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    decimal precio = Model.productoEdit.PRD_PRECIO;
+    string prd_ruta_imagen = $"/img/{Model.productoEdit.PRD_RUTA_IMAGEN}";
+    decimal peso = Model.productoEdit.PRD_PESO;
+    string descripcion = Model.productoEdit.PRD_DESCRIPCION;
+
+}
+
+<h1>Edit</h1>
+
+<h4>PRODUCTO</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form id="agregar-carrito-form" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="productoEdit.PRD_ID" />
+            <input asp-for="idUsuario" type="hidden" />
+            <div>
+                <img src="@prd_ruta_imagen" alt="ruta imagen" style="width: 100%; max-width:200px;" />
+            </div>
+            <div>
+                <p>Descripción: @descripcion</p>
+            </div>
+            <div>
+                <p>Peso: @peso</p>
+            </div>
+            <div>
+                <p>Precio: @precio</p>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Agregar al carrito" class="btn btn-success" onclick="almacenarIdEnForm()" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
