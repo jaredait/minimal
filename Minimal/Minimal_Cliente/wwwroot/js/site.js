@@ -21,11 +21,6 @@ function getProductosLocalStorage() {
     return listaProductos;
 }
 
-function cargarEnInput() {
-    let texto = localStorage.getItem('sesionActiva')
-    document.querySelector('#productos-local-storage').value = texto;
-}
-
 function almacenarSesion() {
     let usuario = document.querySelector('#Credencial_Usuario').value;
     localStorage.setItem('sesionActiva', usuario);

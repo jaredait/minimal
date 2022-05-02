@@ -12,9 +12,11 @@
     @foreach (var producto in Model.listaProductos)
     {
         <div class="card" style="width: 18rem;">
-
-            <img class="card-img-top" src=@Url.Content("~/img/" + producto.PRD_RUTA_IMAGEN) alt="Imagen de la tarjeta"
-                 style="width: 100%; max-width: 100px; max-height: 200px;">
+            <div style="width: 100%; height: 200px; display:flex; flex-direction:row; justify-content:center;">
+                <img class="card-img-top" src=@Url.Content("~/img/" + producto.PRD_RUTA_IMAGEN) alt="Imagen de la tarjeta"
+                     style="width: 100%; max-width: 100px; max-height: auto;">
+            </div>
+            
             <div class="card-body">
                 <h5 class="card-title">@producto.PRD_NOMBRE</h5>
                 <p class="card-text texto">@producto.PRD_PRECIO</p>
