@@ -40,7 +40,7 @@ namespace Minimal_Cliente.Pages.LogIn
             cliente = sessionAccess.getClientePorId(cli_usuario , cli_contrasena);
             if (cliente != null)
             {
-                return RedirectToPage("/TiendaProductos/Index", new { miParametro = 99}) ;
+                return RedirectToPage("/Tienda/Index", new { miParametro = 99}) ;
             }
             else
             {
