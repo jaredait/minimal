@@ -1,0 +1,56 @@
+/*CATEGORÍAS NUEVAS*/
+INSERT INTO CATEGORIA VALUES('GAF', 'Lentes de aumento', 'Lentes de aumento', 'imagen');
+INSERT INTO CATEGORIA VALUES('BOI', 'Boinas', 'Boinas', 'imagen');
+INSERT INTO CATEGORIA VALUES('BLU', 'Blusas', 'Blusas', 'imagen');
+INSERT INTO CATEGORIA VALUES('SAC', 'Sacos', 'Saco', 'imagen');
+INSERT INTO CATEGORIA VALUES('GUA', 'Guantes', 'Guantes', 'imagen');
+INSERT INTO CATEGORIA VALUES('BUF', 'Bufandas', 'Bufanda', 'imagen');
+INSERT INTO CATEGORIA VALUES('GOR', 'Gorros', 'Gorros', 'imagen');
+INSERT INTO CATEGORIA VALUES('INT', 'Interiores', 'Interior', 'imagen');
+INSERT INTO CATEGORIA VALUES('PIJ', 'Pijamas', 'Pijamas', 'imagen');
+INSERT INTO CATEGORIA VALUES('FAL', 'Faldas', 'Faldas', 'imagen');
+INSERT INTO CATEGORIA VALUES('SHO', 'Shorts', 'Shorts', 'imagen');
+INSERT INTO CATEGORIA VALUES('CAM', 'Camisas', 'Camisas', 'imagen');
+INSERT INTO CATEGORIA VALUES('COR', 'Correas', 'Correas', 'imagen');
+INSERT INTO CATEGORIA VALUES('REL', 'Relojes', 'Relojes', 'imagen');
+INSERT INTO CATEGORIA VALUES('CAR', 'Carteras', 'Carteras', 'imagen');
+
+/*PRODUCTOS NUEVOS*/
+
+INSERT INTO PRODUCTO VALUES('BOINCAF', 'Boina', 20.99, 8, 'Boina café', 'boina.jpg', '2022-05-05', 30);
+INSERT INTO PRODUCTO VALUES('GAFAUM', 'Lentes de aumento', 15.99, 8, 'Lentes de aumento 0.25', 'lentes-aumento.jpg', '2022-05-05', 10);
+INSERT INTO PRODUCTO VALUES('BLUROS', 'Blusa', 10.99, 8, 'Blusa rosada talla M', 'blusa.jpg', '2022-05-05', 20);
+INSERT INTO PRODUCTO VALUES('SACAZU', 'Saco', 18.99, 8, 'Saco Azul talla M', 'saco.jpg', '2022-05-05', 40);
+INSERT INTO PRODUCTO VALUES('GUANEG', 'Guantes', 7.99, 8, 'Guantes negros talla 10', 'guantes.jpg', '2022-05-05', 10);
+INSERT INTO PRODUCTO VALUES('BUFROJ', 'Bufanda', 8.99, 8, 'Bufanda roja talla M', 'bufanda.jpg', '2022-05-05', 20);
+INSERT INTO PRODUCTO VALUES('GORAMA', 'Gorra', 4.99, 8, 'Gorra amarilla talla 24', 'gorra.jpg', '2022-05-05', 20);
+INSERT INTO PRODUCTO VALUES('INTNEG', 'Interior', 3.99, 8, 'Interior para hombre talla 42', 'inthomb.jpg', '2022-05-05', 50);
+INSERT INTO PRODUCTO VALUES('PIJMON', 'Pijama', 8.99, 8, 'Pijama Azul con cuadros', 'pij.jpg', '2022-05-05', 30);
+INSERT INTO PRODUCTO VALUES('FALNEG', 'Falda', 10.99, 8, 'Falda Negra talla 36', 'falda.jpg', '2022-05-05', 38);
+INSERT INTO PRODUCTO VALUES('SHORIS', 'Short', 8.99, 8, 'Short negro talla 42', 'short.jpg', '2022-05-05', 80);
+INSERT INTO PRODUCTO VALUES('CAMNEG', 'Camisa', 14.99, 8, 'Camisa Negra talla 40', 'camisa.jpg', '2022-05-05', 30);
+INSERT INTO PRODUCTO VALUES('CORNEG', 'Correa', 10.99, 8, 'Correa Negra talla 42', 'correa.jpg', '2022-05-05', 40);
+INSERT INTO PRODUCTO VALUES('RELORO', 'Reloj', 50.99, 8, 'Reloj de oro 14 Kilates', 'reloj.jpg', '2022-05-05', 10);
+INSERT INTO PRODUCTO VALUES('CARCAF', 'Cartera', 35.99, 8, 'Cartera café dos bolsillos', 'cartera.jpg', '2022-05-05', 10);
+
+/*CLIENTES NUEVOS*/
+
+INSERT INTO CLIENTE VALUES('0113744017', 'Dcaceres2000', '0113744017', 'dcaceres@hotmail.com', 'Doménica', 'Cáceres', 19, 'F', 'Salvador Allende, Conjunto Habitacional "Venecia"', 'Cuenca', 'Azuay', '0976777891');
+INSERT INTO CLIENTE VALUES('0113744447', 'Dpita3440', '0113744447', 'dpita@hotmail.com', 'Darwin', 'Pita', 25, 'M', 'José Peralta Y Maldonado', 'Cuenca', 'Azuay', '0976777892');
+INSERT INTO CLIENTE VALUES('0113744817', 'Marcelen8', '0113744817', 'mcarcelen@hotmail.com', 'Michael', 'Carcelén', 26, 'M', 'Dublé Almeyda y Vespucio', 'Cuenca', 'Azuay', '0976979893');
+INSERT INTO CLIENTE VALUES('1313774017', 'AAbad', '1313774017', 'aabad@hotmail.com', 'Pablo', 'Nieto', 25, 'M', 'El Recreo', 'Manta', 'Manabí', '0976777894');
+INSERT INTO CLIENTE VALUES('1365744917', 'Gzambrano', '1365744917', 'gzambrano@hotmail.com', 'Gladys', 'Zambrano', 25, 'F', 'La Florida y Peralta"', 'Portoviejo', 'Manabí', '0976777895');
+INSERT INTO CLIENTE VALUES('1375844917', 'MPazmino', '1375844917', 'mpazmino@hotmail.com', 'María', 'Pazmiño', 22, 'F', 'Macul y Arrieta', 'Manta', 'Manabí', '0976777896');
+INSERT INTO CLIENTE VALUES('1375888917', 'APazmino', '1375888917', 'apazmino@hotmail.com', 'Alejandra', 'Pazmiño', 28, 'F', 'Arrieta y Golondrinas', 'Manta', 'Manabí', '0976777897');
+INSERT INTO CLIENTE VALUES('0875887917', 'Aruiz', '0875887917', 'aruiz@hotmail.com', 'Adriana', 'Ruiz', 27, 'F', 'La Floresta y Girón ', 'Atacames', 'Esmeraldas', '0976777898');
+INSERT INTO CLIENTE VALUES('0875886917', 'Abalseca208', '0875886917', 'abalseca@hotmail.com', 'Ana', 'Balseca', 26, 'F', 'José Arrieta y Vespucio S13-201', 'Muisne', 'Esmeraldas', '0976777899');
+INSERT INTO CLIENTE VALUES('0875858917', 'Aalvarez34', '0875858917', 'aalvarez@hotmail.com', 'Alejandro', 'Álvarez', 30, 'M', 'Arrieta y la Paz', 'Quinindé', 'Esmeraldas', '0976777900');
+INSERT INTO CLIENTE VALUES('0875848917', 'Vandrade3456', '0875848917', 'vandrade@hotmail.com', 'Valeria', 'Andrade', 29, 'M', 'Zambrano y Dr. Peralta', 'Atacames', 'Esmeraldas', '0976777901');
+INSERT INTO CLIENTE VALUES('0875838917', 'Carmijos', '0875838917', 'carmijos@hotmail.com', 'Cristian', 'Armijos', 24, 'M', 'Balcón de Hostiones, Peralta y Vespucio', 'Atacames', 'Esmeraldas', '0976777902');
+INSERT INTO CLIENTE VALUES('0975838927', 'CDavila342', '0975838927', 'cdavila@hotmail.com', 'Cristian', 'Dávila', 26, 'M', 'Malecón 2000, Peralta y Marana', 'Guayaquil', 'Guayas', '0976777903');
+INSERT INTO CLIENTE VALUES('0975838917', 'APin23', '0975838917', 'apin23@hotmail.com', 'Andrés', 'Pin', 28, 'M', 'Guasmo Sur, Antonieta de las nieves y Chespirito', 'Milagro', 'Guayas', '0976777904');
+INSERT INTO CLIENTE VALUES('0975838907', 'Jmariano', '0975838907', 'jmariano@hotmail.com', 'Jesús', 'Mariano', 34, 'M', 'Guasmo Sur, Antonieta de las nieves y Peralta', 'Guayaquil', 'Guayas', '0976777905');
+
+
+
+
