@@ -9,26 +9,29 @@ using Minimal.Models;
 using Minimal_Cliente.Data;
 using Minimal_Cliente.Models;
 using Minimal_Cliente.Models.Access;
+using Minimal_Cliente.Models.ViewModels;
 
 namespace Minimal_Cliente.Pages.Carrito
 {
     public class IndexModel : PageModel
     {
-        private ProductoAccess productoAccess;
+        public IProductoCarritoAccess productoCarritoAccess;
         public CarritoAccess carritoAccess;
 
         public IndexModel(Minimal_Cliente.Data.Minimal_ClienteContext context)
         {
-            productoAccess = new ProductoAccess(context);
+            productoCarritoAccess = new ProductoCarritoAccess(context);
             carritoAccess = new CarritoAccess(context);
         }
 
-        public List<PRODUCTO> ListaProductos { get;set; }
+        public List<ProductoCarritoViewModel> ListaProductoCarrito { get;set; }
         public List<CARRITO> ListaCarrito { get; set; }
 
         public void OnGet(string id)
         {
             ListaCarrito = carritoAccess.getProductos(id);
+
+            ListaProductoCarrito = (List<ProductoCarritoViewModel>)productoCarritoAccess.GetProductoCarritoViewModels(ListaCarrito);
         }
     }
 }

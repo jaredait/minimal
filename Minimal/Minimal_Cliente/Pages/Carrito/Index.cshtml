@@ -10,34 +10,47 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ListaCarrito[0].CAR_ID)
+                @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].CAR_CANTIDAD)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ListaCarrito[0].PRD_ID)
+                @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].PRD_PRECIO)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ListaCarrito[0].CLI_USUARIO)
+                @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].PRD_PESO)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ListaCarrito[0].CAR_CANTIDAD)
+                @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].PRD_DESCRIPCION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].PRD_RUTA_IMAGEN)
             </th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.ListaCarrito) {
+@foreach (var item in Model.ListaProductoCarrito) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CAR_ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PRD_ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CLI_USUARIO)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CAR_CANTIDAD)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRD_PRECIO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRD_PESO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRD_DESCRIPCION)
+            </td>
+            <td>
+                <img src=@Url.Content("~/img/" + item.PRD_RUTA_IMAGEN) alt="imagen del producto" 
+                     style="width: 100%; max-width: 100px; max-height: auto;"/>
+            </td>
+            <td>
+                <div class="btn btn-outline-secondary" id="@item.CAR_ID">
+                    <a asp-page="./Edit" asp-route-id="@item.CAR_ID" class="text-decoration-none">Detalles</a>
+                </div>
+            </td>
+
         </tr>
 }
     </tbody>
