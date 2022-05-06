@@ -7,6 +7,7 @@ namespace Minimal_Cliente.Models.ViewModels
 {
     public class ProductoCarritoViewModel
     {
+        public int CAR_ID { get; set; }
         public string CLI_USUARIO { get; set; }
         public string PRD_ID { get; set; }
         public int CAR_CANTIDAD { get; set; }
