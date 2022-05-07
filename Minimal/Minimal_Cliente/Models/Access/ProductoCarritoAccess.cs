@@ -19,6 +19,27 @@ namespace Minimal_Cliente.Models.Access
             listaProductoCarrito = new List<ProductoCarritoViewModel>();
         }
 
+        public ProductoCarritoViewModel GetProductoCarritoViewModel(int id)
+        {
+            PRODUCTO productoTemp;
+            CARRITO carritoTemp;
+
+            carritoTemp = _contexto.CARRITO.Where(c => c.CAR_ID == id).FirstOrDefault();
+            productoTemp = _contexto.PRODUCTO.Where(p => p.PRD_ID == carritoTemp.PRD_ID).FirstOrDefault();
+
+            return new ProductoCarritoViewModel()
+            {
+                CAR_ID = carritoTemp.CAR_ID,
+                CLI_USUARIO = carritoTemp.CLI_USUARIO,
+                PRD_ID = carritoTemp.PRD_ID,
+                CAR_CANTIDAD = carritoTemp.CAR_CANTIDAD,
+                PRD_PRECIO = productoTemp.PRD_PRECIO,
+                PRD_PESO = productoTemp.PRD_PESO,
+                PRD_DESCRIPCION = productoTemp.PRD_DESCRIPCION,
+                PRD_RUTA_IMAGEN = productoTemp.PRD_RUTA_IMAGEN
+            };
+        }
+
         /// <summary>
         /// Este metodo se usa para obtener la lista de productos con un formato de presentacion en el carrito de compras
         /// </summary>
