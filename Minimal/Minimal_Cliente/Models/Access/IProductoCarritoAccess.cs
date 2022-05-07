@@ -8,7 +8,7 @@ namespace Minimal_Cliente.Models.Access
 {
     public interface IProductoCarritoAccess
     {
-        IEnumerable<ProductoCarritoViewModel> GetProductoCarritoViewModels(IEnumerable<CARRITO> listaCarrito);
-        ProductoCarritoViewModel GetProductoCarritoViewModel(int id);
+        IEnumerable<ProductoCarritoViewModel> GetListaProductoCarrito(IEnumerable<CARRITO> listaCarrito);
+        ProductoCarritoViewModel GetProductoCarritoPorId(int id);
     }
 }

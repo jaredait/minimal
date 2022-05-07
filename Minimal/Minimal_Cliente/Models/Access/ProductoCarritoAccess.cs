@@ -19,7 +19,7 @@ namespace Minimal_Cliente.Models.Access
             listaProductoCarrito = new List<ProductoCarritoViewModel>();
         }
 
-        public ProductoCarritoViewModel GetProductoCarritoViewModel(int id)
+        public ProductoCarritoViewModel GetProductoCarritoPorId(int id)
         {
             PRODUCTO productoTemp;
             CARRITO carritoTemp;
@@ -45,7 +45,7 @@ namespace Minimal_Cliente.Models.Access
         /// </summary>
         /// <param name="listaCarrito">Lista de objetos CARRITO que se desea obtener el formato para el view model</param>
         /// <returns>Lista de objetos con formato de view model</returns>
-        public IEnumerable<ProductoCarritoViewModel> GetProductoCarritoViewModels(IEnumerable<CARRITO> listaCarrito)
+        public IEnumerable<ProductoCarritoViewModel> GetListaProductoCarrito(IEnumerable<CARRITO> listaCarrito)
         {
             PRODUCTO productoTemp = new PRODUCTO();
             CARRITO carritoTemp = new CARRITO();

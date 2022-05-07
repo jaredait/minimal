@@ -9,7 +9,7 @@ namespace Minimal_Cliente.Models.Access
     interface ICarritoAccess
     {
         bool AddProducto(CARRITO carritoNuevo);
-        List<CARRITO> getProductos(string CLI_USUARIO);
-        //List<PRODUCTO> getProductosCarrito();
+        List<CARRITO> GetProductos(string CLI_USUARIO);
+        CARRITO GetCarritoPorId(int id);
     }
 }

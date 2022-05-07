@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Minimal_Cliente.Data;
 using Minimal_Cliente.Models;
 using Minimal_Cliente.Models.Access;
+using Minimal_Cliente.Models.ViewModels;
 
 namespace Minimal_Cliente.Pages.Carrito
 {
@@ -18,27 +19,22 @@ namespace Minimal_Cliente.Pages.Carrito
         public DeleteModel(Minimal_Cliente.Data.Minimal_ClienteContext context)
         {
             _context = context;
+            productoCarritoAccess = new ProductoCarritoAccess(context);
+            carritoAccess = new CarritoAccess(context);
         }
 
         [BindProperty]
-        public CARRITO CARRITO { get; set; }
-        public IProductoCarritoAccess productoCarritoAccess;
+        public CARRITO carritoDelete { get; set; }
+        [BindProperty] 
+        public ProductoCarritoViewModel productoCarrito { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        private IProductoCarritoAccess productoCarritoAccess;
+        private ICarritoAccess carritoAccess;
+
+        public void OnGet(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            // aqui consultar el objeto ProducoCarrito y mostrarlo en la vista
-            CARRITO = await _context.CARRITO.FirstOrDefaultAsync(m => m.CAR_ID == id);
-
-            if (CARRITO == null)
-            {
-                return NotFound();
-            }
-            return Page();
+            carritoDelete = carritoAccess.GetCarritoPorId(Convert.ToInt32(id));
+            productoCarrito = productoCarritoAccess.GetProductoCarritoPorId(Convert.ToInt32(id));
         }
 
         public async Task<IActionResult> OnPostAsync(int? id)
@@ -48,11 +44,11 @@ namespace Minimal_Cliente.Pages.Carrito
                 return NotFound();
             }
 
-            CARRITO = await _context.CARRITO.FindAsync(id);
+            carritoDelete = await _context.CARRITO.FindAsync(id);
 
-            if (CARRITO != null)
+            if (carritoDelete != null)
             {
-                _context.CARRITO.Remove(CARRITO);
+                _context.CARRITO.Remove(carritoDelete);
                 await _context.SaveChangesAsync();
             }
 

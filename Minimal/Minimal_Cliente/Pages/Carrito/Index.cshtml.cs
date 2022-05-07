@@ -29,9 +29,9 @@ namespace Minimal_Cliente.Pages.Carrito
 
         public void OnGet(string id)
         {
-            ListaCarrito = carritoAccess.getProductos(id);
+            ListaCarrito = carritoAccess.GetProductos(id);
 
-            ListaProductoCarrito = (List<ProductoCarritoViewModel>)productoCarritoAccess.GetProductoCarritoViewModels(ListaCarrito);
+            ListaProductoCarrito = (List<ProductoCarritoViewModel>)productoCarritoAccess.GetListaProductoCarrito(ListaCarrito);
         }
     }
 }

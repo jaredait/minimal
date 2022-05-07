@@ -35,8 +35,8 @@ function obtenerIdUsuario() {
     return localStorage.getItem('sesionActiva');
 }
 
-function obtenerUsuarioCarrito() {
-    let item = document.querySelector("#boton-carrito-layout");
+function obtenerUsuarioCarrito(item) {
+    //let item = document.querySelector("#boton-carrito-layout");
     let idUsuario = obtenerIdUsuario();
 
     item.setAttribute("href", `/Carrito?id=${idUsuario}`);

@@ -41,11 +41,14 @@ namespace Minimal_Cliente.Models.Access
             }
         }
 
-        public List<CARRITO> getProductos(string CLI_USUARIO)
+        public List<CARRITO> GetProductos(string CLI_USUARIO)
         {
             return _contexto.CARRITO.Where(c => c.CLI_USUARIO == CLI_USUARIO).ToList();
         }
 
-
+        public CARRITO GetCarritoPorId(int id)
+        {
+            return _contexto.CARRITO.Where(c => c.CAR_ID == id).FirstOrDefault();
+        }
     }
 }
