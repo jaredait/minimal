@@ -1,4 +1,5 @@
-﻿using Minimal.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Minimal.Models;
 using Minimal_Cliente.Data;
 using Minimal_Cliente.Models.ViewModels;
 using System;
@@ -71,5 +72,6 @@ namespace Minimal_Cliente.Models.Access
 
             return listaProductoCarrito;
         }
+
     }
 }

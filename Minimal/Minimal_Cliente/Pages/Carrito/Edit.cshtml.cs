@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Minimal_Cliente.Data;
 using Minimal_Cliente.Models;
+using Minimal_Cliente.Models.Access;
+using Minimal_Cliente.Models.ViewModels;
 
 namespace Minimal_Cliente.Pages.Carrito
 {
@@ -18,60 +20,37 @@ namespace Minimal_Cliente.Pages.Carrito
         public EditModel(Minimal_Cliente.Data.Minimal_ClienteContext context)
         {
             _context = context;
+            productoCarritoAccess = new ProductoCarritoAccess(context);
+            carritoAccess = new CarritoAccess(context);
         }
 
         [BindProperty]
-        public CARRITO CARRITO { get; set; }
+        public CARRITO carritoEdit { get; set; }
+        [BindProperty]
+        public ProductoCarritoViewModel productoCarrito { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        private IProductoCarritoAccess productoCarritoAccess;
+        private ICarritoAccess carritoAccess;
+
+        public void OnGet(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            CARRITO = await _context.CARRITO.FirstOrDefaultAsync(m => m.CAR_ID == id);
-
-            if (CARRITO == null)
-            {
-                return NotFound();
-            }
-            return Page();
+            carritoEdit = carritoAccess.GetCarritoPorId(Convert.ToInt32(id));
+            productoCarrito = productoCarritoAccess.GetProductoCarritoPorId(Convert.ToInt32(id));
         }
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public void OnPost()
         {
-            if (!ModelState.IsValid)
+            carritoEdit = carritoAccess.GetCarritoPorId(carritoEdit.CAR_ID);
+            CARRITO carritoTemp = new CARRITO()
             {
-                return Page();
-            }
-
-            _context.Attach(CARRITO).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CARRITOExists(CARRITO.CAR_ID))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return RedirectToPage("./Index");
-        }
-
-        private bool CARRITOExists(int id)
-        {
-            return _context.CARRITO.Any(e => e.CAR_ID == id);
+                CAR_ID = carritoEdit.CAR_ID,
+                PRD_ID = carritoEdit.PRD_ID,
+                CLI_USUARIO = carritoEdit.CLI_USUARIO,
+                CAR_CANTIDAD = productoCarrito.CAR_CANTIDAD
+            };
+            carritoAccess.UpdateCarrito(carritoTemp);
         }
     }
 }

@@ -50,5 +50,14 @@ namespace Minimal_Cliente.Models.Access
         {
             return _contexto.CARRITO.Where(c => c.CAR_ID == id).FirstOrDefault();
         }
+
+        public bool UpdateCarrito(CARRITO carritoActualizado)
+        {
+            CARRITO carritoTemp = GetCarritoPorId(carritoActualizado.CAR_ID);
+            carritoTemp.CAR_CANTIDAD = carritoActualizado.CAR_CANTIDAD;
+            _contexto.SaveChanges();
+            return true;
+
+        }
     }
 }

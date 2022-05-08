@@ -13,21 +13,26 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="CARRITO.CAR_ID" />
+            <input type="hidden" asp-for="carritoEdit.CAR_ID" />
             <div class="form-group">
-                <label asp-for="CARRITO.CLI_USUARIO" class="control-label"></label>
-                <input asp-for="CARRITO.CLI_USUARIO" class="form-control" />
-                <span asp-validation-for="CARRITO.CLI_USUARIO" class="text-danger"></span>
+                <label asp-for="productoCarrito.PRD_DESCRIPCION" class="control-label"></label>
+                <input asp-for="productoCarrito.PRD_DESCRIPCION" class="form-control" disabled/>
+                <span asp-validation-for="productoCarrito.PRD_DESCRIPCION" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CARRITO.PRD_ID" class="control-label"></label>
-                <input asp-for="CARRITO.PRD_ID" class="form-control" />
-                <span asp-validation-for="CARRITO.PRD_ID" class="text-danger"></span>
+                <label asp-for="productoCarrito.PRD_PRECIO" class="control-label"></label>
+                <input asp-for="productoCarrito.PRD_PRECIO" class="form-control" disabled/>
+                <span asp-validation-for="productoCarrito.PRD_PRECIO" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CARRITO.CAR_CANTIDAD" class="control-label"></label>
-                <input asp-for="CARRITO.CAR_CANTIDAD" class="form-control" />
-                <span asp-validation-for="CARRITO.CAR_CANTIDAD" class="text-danger"></span>
+                <label asp-for="productoCarrito.PRD_PESO" class="control-label"></label>
+                <input asp-for="productoCarrito.PRD_PESO" class="form-control" disabled/>
+                <span asp-validation-for="productoCarrito.PRD_PESO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="productoCarrito.CAR_CANTIDAD" class="control-label"></label>
+                <input asp-for="productoCarrito.CAR_CANTIDAD" class="form-control" />
+                <span asp-validation-for="productoCarrito.CAR_CANTIDAD" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
