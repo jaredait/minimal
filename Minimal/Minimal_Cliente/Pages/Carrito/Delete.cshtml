@@ -3,21 +3,16 @@
 
 @{
     ViewData["Title"] = "Eliminar";
+    string rutaImg = "/img/" + Model.productoCarrito.PRD_RUTA_IMAGEN;
 }
 
 <h1>Eliminar</h1>
 
 <div>
     <hr />
+    <img src=@rutaImg alt="imagen del producto"
+         style="width: 100%; max-width: 100px; max-height: auto;" />
     <dl class="row">
-        <!--
-
-    <dt>
-        <img src=Url.Content("~/img/" + productoCarrito.PRD_RUTA_IMAGEN) alt="imagen del producto"
-             style="width: 100%; max-width: 100px; max-height: auto;" />
-    </dt>
-        -->
-
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.productoCarrito.PRD_DESCRIPCION)
         </dt>
@@ -43,7 +38,7 @@
             @Html.DisplayFor(model => model.productoCarrito.PRD_PESO)
         </dd>
     </dl>
-    
+
     <form method="post">
         <input type="hidden" asp-for="productoCarrito.CAR_ID" />
         <a onclick="obtenerUsuarioCarrito(this)">
