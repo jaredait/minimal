@@ -12,5 +12,7 @@ namespace Minimal_Cliente.Models.Access
         List<CARRITO> GetProductos(string CLI_USUARIO);
         CARRITO GetCarritoPorId(int id);
         bool UpdateCarrito(CARRITO carritoActualizado);
+        bool CarritoExiste(CARRITO carritoExistente);
+        void AgregarUno(CARRITO carritoSumar);
     }
 }

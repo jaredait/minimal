@@ -59,5 +59,21 @@ namespace Minimal_Cliente.Models.Access
             return true;
 
         }
+
+        public bool CarritoExiste(CARRITO carritoExistente)
+        {
+            CARRITO carritoTemp = _contexto.CARRITO.Where(c => c.CLI_USUARIO == carritoExistente.CLI_USUARIO &&
+            c.PRD_ID == carritoExistente.PRD_ID).FirstOrDefault();
+
+            return carritoTemp == null ? false : true;
+        }
+
+        public void AgregarUno(CARRITO carritoAgregar)
+        {
+            CARRITO carritoTemp = _contexto.CARRITO.Where(c => c.CLI_USUARIO == carritoAgregar.CLI_USUARIO &&
+                        c.PRD_ID == carritoAgregar.PRD_ID).FirstOrDefault();
+            carritoTemp.CAR_CANTIDAD++;
+            _contexto.SaveChanges();
+        }
     }
 }

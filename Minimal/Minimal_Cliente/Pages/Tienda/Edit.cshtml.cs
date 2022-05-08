@@ -50,42 +50,20 @@ namespace Minimal_Cliente.Pages.Tienda
 
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            //_context.Attach(productoEdit).State = EntityState.Modified;
-
-            carrito.CAR_ID = 1;
-            carrito.CAR_CANTIDAD = 22;
             carrito.CLI_USUARIO = idUsuario;
             carrito.PRD_ID = productoEdit.PRD_ID;
 
-            carritoAccess.AddProducto(carrito);
-            /*
-            try
+            if (carritoAccess.CarritoExiste(carrito))
             {
-                await _context.SaveChangesAsync();
+                carritoAccess.AgregarUno(carrito);
             }
-            catch (DbUpdateConcurrencyException)
+            else
             {
-                if (!PRODUCTOExists(productoEdit.PRD_ID))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                carritoAccess.AddProducto(carrito);
             }
-            */
-            return RedirectToPage("./Index");
-        }
 
-        private bool PRODUCTOExists(string id)
-        {
-            return _context.PRODUCTO.Any(e => e.PRD_ID == id);
+
+            return RedirectToPage("./Index");
         }
     }
 }

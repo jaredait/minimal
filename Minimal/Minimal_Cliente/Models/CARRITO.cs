@@ -8,6 +8,16 @@ namespace Minimal_Cliente.Models
 {
     public class CARRITO
     {
+        public static int Default_Id = 1;
+        public static int Default_Cantidad = 1;
+
+
+        public CARRITO()
+        {
+            CAR_ID = Default_Id;
+            CAR_CANTIDAD = Default_Cantidad;
+        }
+
         [Key]
         public int CAR_ID { get; set; }
 
