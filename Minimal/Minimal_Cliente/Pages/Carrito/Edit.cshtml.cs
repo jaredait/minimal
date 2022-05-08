@@ -28,6 +28,8 @@ namespace Minimal_Cliente.Pages.Carrito
         public CARRITO carritoEdit { get; set; }
         [BindProperty]
         public ProductoCarritoViewModel productoCarrito { get; set; }
+        [BindProperty]
+        public string idUsuario { get; set; }
 
         private IProductoCarritoAccess productoCarritoAccess;
         private ICarritoAccess carritoAccess;
@@ -40,7 +42,7 @@ namespace Minimal_Cliente.Pages.Carrito
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.
-        public void OnPost()
+        public RedirectResult OnPost()
         {
             carritoEdit = carritoAccess.GetCarritoPorId(carritoEdit.CAR_ID);
             CARRITO carritoTemp = new CARRITO()
@@ -51,6 +53,7 @@ namespace Minimal_Cliente.Pages.Carrito
                 CAR_CANTIDAD = productoCarrito.CAR_CANTIDAD
             };
             carritoAccess.UpdateCarrito(carritoTemp);
+            return Redirect($"/Carrito?id={idUsuario}");
         }
     }
 }

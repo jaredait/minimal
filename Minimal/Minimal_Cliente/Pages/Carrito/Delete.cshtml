@@ -40,9 +40,10 @@
     </dl>
 
     <form method="post">
+        <input asp-for="idUsuario" hidden />
         <input type="hidden" asp-for="productoCarrito.CAR_ID" />
         <a onclick="obtenerUsuarioCarrito(this)">
-            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+            <input type="submit" value="Eliminar" class="btn btn-danger" onclick="almacenarIdEnForm()"/> |
         </a>
         <a asp-page="./Index">Volver</a>
     </form>

@@ -41,6 +41,11 @@ function obtenerUsuarioCarrito(item) {
 
     item.setAttribute("href", `/Carrito?id=${idUsuario}`);
 }
+
+function cargarEnIdUsuario() {
+    let idUsuario = obtenerIdUsuario();
+    document.querySelector("#idUsuario").value = idUsuario;
+}
 // main
 
 

@@ -25,8 +25,10 @@ namespace Minimal_Cliente.Pages.Carrito
 
         [BindProperty]
         public CARRITO carritoDelete { get; set; }
-        [BindProperty] 
+        [BindProperty]
         public ProductoCarritoViewModel productoCarrito { get; set; }
+        [BindProperty]
+        public string idUsuario { get; set; }
 
         private IProductoCarritoAccess productoCarritoAccess;
         private ICarritoAccess carritoAccess;
@@ -37,22 +39,12 @@ namespace Minimal_Cliente.Pages.Carrito
             productoCarrito = productoCarritoAccess.GetProductoCarritoPorId(Convert.ToInt32(id));
         }
 
-        public async Task<IActionResult> OnPostAsync(int? id)
+        public RedirectResult OnPost(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            _context.CARRITO.Remove(carritoDelete);
+            _context.SaveChangesAsync();
 
-            carritoDelete = await _context.CARRITO.FindAsync(id);
-
-            if (carritoDelete != null)
-            {
-                _context.CARRITO.Remove(carritoDelete);
-                await _context.SaveChangesAsync();
-            }
-
-            return RedirectToPage("./Index");
+            return Redirect($"/Carrito?id={idUsuario}");
         }
     }
 }
