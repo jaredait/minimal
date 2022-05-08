@@ -39,11 +39,9 @@ namespace Minimal_Cliente.Pages.Carrito
             productoCarrito = productoCarritoAccess.GetProductoCarritoPorId(Convert.ToInt32(id));
         }
 
-        public RedirectResult OnPost(int? id)
+        public RedirectResult OnPost(int id)
         {
-            _context.CARRITO.Remove(carritoDelete);
-            _context.SaveChangesAsync();
-
+            carritoAccess.EliminarProducto(id);
             return Redirect($"/Carrito?id={idUsuario}");
         }
     }

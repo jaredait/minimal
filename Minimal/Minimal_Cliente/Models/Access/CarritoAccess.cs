@@ -75,5 +75,13 @@ namespace Minimal_Cliente.Models.Access
             carritoTemp.CAR_CANTIDAD++;
             _contexto.SaveChanges();
         }
+
+        public bool EliminarProducto(int id)
+        {
+            CARRITO carritoTemp = GetCarritoPorId(id);
+            _contexto.CARRITO.Remove(carritoTemp);
+            _contexto.SaveChanges();
+            return true;
+        }
     }
 }
