@@ -2,10 +2,10 @@
 @model Minimal_Cliente.Pages.Tienda.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Tienda";
 }
 
-<h1>Index</h1>
+<h1>Productos</h1>
 
 
 <div class="card-columns">
@@ -20,8 +20,8 @@
             <div class="card-body">
                 <h5 class="card-title">@producto.PRD_NOMBRE</h5>
                 <p class="card-text texto">@producto.PRD_PRECIO</p>
-                <div class="btn btn-outline-secondary" id="@producto.PRD_ID">
-                    <a asp-page="./Edit" asp-route-id="@producto.PRD_ID" class="text-decoration-none">Detalles</a>
+                <div class="btn btn-primary" id="@producto.PRD_ID">
+                    <a asp-page="./Edit" asp-route-id="@producto.PRD_ID" class="text-decoration-none" style="color: #ffffff;">Detalles</a>
                 </div>
             </div>
         </div>

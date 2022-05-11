@@ -2,17 +2,14 @@
 @model Minimal_Cliente.Pages.Tienda.EditModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Detalles";
     decimal precio = Model.productoEdit.PRD_PRECIO;
     string prd_ruta_imagen = $"/img/{Model.productoEdit.PRD_RUTA_IMAGEN}";
     decimal peso = Model.productoEdit.PRD_PESO;
     string descripcion = Model.productoEdit.PRD_DESCRIPCION;
 
 }
-
-<h1>Edit</h1>
-
-<h4>PRODUCTO</h4>
+<h4>Detalles</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -40,7 +37,7 @@
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index">Volver</a>
 </div>
 
 @section Scripts {
