@@ -76,3 +76,13 @@ body {
     height: auto;
 }
 
+#btn {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#reg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

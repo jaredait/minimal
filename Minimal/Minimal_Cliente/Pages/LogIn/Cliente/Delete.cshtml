@@ -1,0 +1,88 @@
+﻿@page
+@model Minimal_Cliente.Pages.LogIn.Cliente.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CLIENTE</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CLIENTE.CLI_CONTRASENA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CLIENTE.CLI_CONTRASENA)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CLIENTE.CLI_CEDULA_RUC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CLIENTE.CLI_CEDULA_RUC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CLIENTE.CLI_EMAIL)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CLIENTE.CLI_EMAIL)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CLIENTE.CLI_NOMBRE)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CLIENTE.CLI_NOMBRE)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CLIENTE.CLI_APELLIDO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CLIENTE.CLI_APELLIDO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CLIENTE.CLI_EDAD)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CLIENTE.CLI_EDAD)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CLIENTE.CLI_SEXO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CLIENTE.CLI_SEXO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CLIENTE.CLI_DIRECCION)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CLIENTE.CLI_DIRECCION)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CLIENTE.CLI_CIUDAD)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CLIENTE.CLI_CIUDAD)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CLIENTE.CLI_PROVINCIA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CLIENTE.CLI_PROVINCIA)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CLIENTE.CLI_TELEFONO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CLIENTE.CLI_TELEFONO)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="CLIENTE.CLI_USUARIO" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

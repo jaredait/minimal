@@ -25,27 +25,16 @@
                 </div>
                 <div asp-validation-summary="All" class="text-danger">
                 </div>
-                <div class="mb-3">
+                <div class="mb-3" id="btn">
                     <button type="submit" class="btn btn-primary" onclick="almacenarSesion()">Iniciar Sesión</button>
                 </div>
             </form>
-        </div>
-
-        <div class="col-sm-12 col-md-12 col-lg-4">
-            <h1 class="ab-3">REGÍSTRATE</h1>
-            <p>
-                SI TODAVÍA NO TIENES UNA CUENTA DE USUARIO DE MINIMAL UTILIZA ESTA OPCIÓN PARA ACCEDER AL FORMULARIO DE REGISTRO.
-            </p>
-            <p>
-                TE SOLICITAREMOS LA INFORMACIÓN IMPRESCINDIBLE PARA AGILIZAR EL PROCESO DE COMPRA.
-            </p>
             <form method="post">
-                <div class="mb-3">
-                    <button type="submit" class="btn btn-primary" asp-page="./Cliente/Create">Crear Cuenta</button>
+                <div class="mb-3" id="btn">
+                    <button type="submit" class="btn btn-primary" asp-page="./Cliente/Create">Crear Cuenta Nueva</button>
                 </div>
             </form>
         </div>
-
 
     </div>
 </div>

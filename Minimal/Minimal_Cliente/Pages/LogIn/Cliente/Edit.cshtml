@@ -1,22 +1,21 @@
 ﻿@page
-@model Minimal_Cliente.Pages.LogIn.Cliente.CreateModel
+@model Minimal_Cliente.Pages.LogIn.Cliente.EditModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
-<h1>Registrarte</h1>
-
-<h4>Es rápido y fácil</h4>
+<h1>Editar Perfil</h1>
 <hr />
 <div class="row" id="reg">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CLIENTE.CLI_USUARIO" />
             <div class="form-group">
-                <label asp-for="CLIENTE.CLI_USUARIO" class="control-label"></label>
-                <input asp-for="CLIENTE.CLI_USUARIO" class="form-control" />
-                <span asp-validation-for="CLIENTE.CLI_USUARIO" class="text-danger"></span>
+                <label asp-for="CLIENTE.CLI_CONTRASENA" class="control-label"></label>
+                <input asp-for="CLIENTE.CLI_CONTRASENA" class="form-control" />
+                <span asp-validation-for="CLIENTE.CLI_CONTRASENA" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CLIENTE.CLI_CEDULA_RUC" class="control-label"></label>
@@ -69,13 +68,14 @@
                 <span asp-validation-for="CLIENTE.CLI_TELEFONO" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Registrarte" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
+
 <div>
-    <a asp-page="../Index">Inicio de Sesión</a>
+    <a asp-page="./Index">Back to List</a>
 </div>
 
 @section Scripts {

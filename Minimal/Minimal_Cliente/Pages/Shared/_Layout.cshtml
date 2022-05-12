@@ -25,11 +25,21 @@
                             <a id="boton-carrito-layout" onclick="obtenerUsuarioCarrito(this)" class="nav-link text-dark" asp-area="" asp-page="/Carrito/Index">Carrito</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/LogIn/Index">Iniciar Sesión</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Tienda/Index">Tienda</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/LogIn/Index">Iniciar Sesión</a>
+                        </li>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Mi Perfil!
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="/LogIn/Cliente/Details" onclick="obtenerUsuarioPerfilDetalle(this)">Ver Perfil</a>
+                                <a class="dropdown-item" href="/LogIn/Cliente/Edit" onclick="obtenerUsuarioPerfilEdit(this)">Editar Perfil</a>
+                                <a class="dropdown-item" href="">Cerrar Sesion</a>
+                            </div>
+                        </div>
                     </ul>
                 </div>
             </div>

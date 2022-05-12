@@ -42,6 +42,16 @@ function obtenerUsuarioCarrito(item) {
     item.setAttribute("href", `/Carrito?id=${idUsuario}`);
 }
 
+function obtenerUsuarioPerfilDetalle(item) {
+    let idUsuario = obtenerIdUsuario();
+    item.setAttribute("href", `/LogIn/Cliente/Details?id=${idUsuario}`);
+}
+
+function obtenerUsuarioPerfilEdit(item) {
+    let idUsuario = obtenerIdUsuario();
+    item.setAttribute("href", `/LogIn/Cliente/Edit?id=${idUsuario}`);
+}
+
 function cargarEnIdUsuario() {
     let idUsuario = obtenerIdUsuario();
     document.querySelector("#idUsuario").value = idUsuario;
