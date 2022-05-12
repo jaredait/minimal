@@ -5,7 +5,7 @@
     ViewData["Title"] = "Carrito";
 }
 
-<h1>Index</h1>
+<h1>Mi Carrito</h1>
 <table class="table">
     <thead>
         <tr>
@@ -46,11 +46,11 @@
                      style="width: 100%; max-width: 100px; max-height: auto;" />
             </td>
             <td>
-                <div class="btn btn-outline-secondary" id="@item.CAR_ID">
-                    <a asp-page="./Edit" asp-route-id="@item.CAR_ID" class="text-decoration-none">Detalles</a>
+                <div class="btn btn-primary" id="@item.CAR_ID" >
+                    <a asp-page="./Edit" asp-route-id="@item.CAR_ID" class="text-decoration-none" style="color: white;">Detalles</a>
                 </div>
-                <div class="btn btn-outline-danger" id="@item.CAR_ID">
-                    <a id="@item.CAR_ID" asp-page="./Delete" asp-route-id="@item.CAR_ID" class="text-decoration-none eliminar">Eliminar</a>
+                <div class="btn btn-danger" id="@item.CAR_ID">
+                    <a id="@item.CAR_ID" asp-page="./Delete" asp-route-id="@item.CAR_ID" class="text-decoration-none eliminar" style="color: white;">Eliminar</a>
                 </div>
 
             </td>
