@@ -26,6 +26,11 @@ function almacenarSesion() {
     localStorage.setItem('sesionActiva', usuario);
 }
 
+function eliminarSesion() {
+    localStorage.removeItem('sesionActiva');
+}
+
+
 function almacenarIdEnForm() {
     let idUsuario = localStorage.getItem('sesionActiva')
     document.querySelector('#idUsuario').value = idUsuario;

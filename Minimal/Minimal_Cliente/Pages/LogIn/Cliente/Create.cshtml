@@ -16,7 +16,12 @@
             <div class="form-group">
                 <label asp-for="CLIENTE.CLI_USUARIO" class="control-label"></label>
                 <input asp-for="CLIENTE.CLI_USUARIO" class="form-control" />
+                <p>Ingrese su número de cédula</p>
                 <span asp-validation-for="CLIENTE.CLI_USUARIO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="CLIENTE.CLI_CONTRASENA" asp-action="GenerarContrasena" class="form-control" type="hidden"/>
+                <span asp-validation-for="CLIENTE.CLI_CONTRASENA" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CLIENTE.CLI_CEDULA_RUC" class="control-label"></label>

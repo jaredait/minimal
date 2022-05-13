@@ -13,7 +13,7 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Tienda/Index">
-                    <img src="~/img/minimal-logo-200x200.png" alt="logo minimal" style="max-width: 90px;"/>
+                    <img src="~/img/minimal-logo-200x200.png" alt="logo minimal" style="max-width: 90px;" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -27,19 +27,23 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Tienda/Index">Tienda</a>
                         </li>
-                        <li class="nav-item">
+                    </ul>
+                    <ul class="nav navbar-nav ms-auto" id="is" style="visibility:hidden">
+                        <li class="nav-item" >
                             <a class="nav-link text-dark" asp-area="" asp-page="/LogIn/Index">Iniciar Sesión</a>
                         </li>
-                        <div class="dropdown">
+                    </ul>
+                    <ul class="nav navbar-nav ms-auto" id="dr" style="visibility:hidden">
+                        <li class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Mi Perfil!
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="/LogIn/Cliente/Details" onclick="obtenerUsuarioPerfilDetalle(this)">Ver Perfil</a>
                                 <a class="dropdown-item" href="/LogIn/Cliente/Edit" onclick="obtenerUsuarioPerfilEdit(this)">Editar Perfil</a>
-                                <a class="dropdown-item" href="">Cerrar Sesion</a>
+                                <a class="dropdown-item" href="/Tienda/Index" onclick="eliminarSesion()">Cerrar Sesion</a>
                             </div>
-                        </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -60,6 +64,15 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        if (obtenerIdUsuario() != null) {
+            var p = document.getElementById("dr");
+            p.style.visibility = "visible";
+        } else {
+            var p = document.getElementById("is");
+            p.style.visibility = "visible";
+        }
+    </script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

@@ -32,16 +32,16 @@ namespace Minimal_Cliente.Pages.LogIn.Cliente
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
+            CLIENTE.CLI_CONTRASENA = GenerarContrasena();
             if (!ModelState.IsValid)
             {
                 return Page();
             }
-            CLIENTE.CLI_CONTRASENA = GenerarContrasena();
             _context.CLIENTE.Add(CLIENTE);
             await _context.SaveChangesAsync();
             SendEmail(CLIENTE.CLI_NOMBRE, CLIENTE.CLI_EMAIL, CLIENTE.CLI_CONTRASENA);
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("../Index");
         }
 
         public void SendEmail(string user, string email, string contrasena)
@@ -50,13 +50,14 @@ namespace Minimal_Cliente.Pages.LogIn.Cliente
             {
                 mail.From = new MailAddress("garciaandres3d@gmail.com");
                 mail.To.Add(email);
+                mail.Subject = "Usuario y Contraseña Minimal";
                 mail.Body = $"Hola {user}, la clave para que pueda ingresar a Minimal es la siguiente: {contrasena}. </br> Una vez que haya ingresado podrá cambiar su clave.";
                 mail.IsBodyHtml = true;
                 using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
                     smtp.UseDefaultCredentials = false;
                     smtp.EnableSsl = true;
-                    smtp.Credentials = new NetworkCredential("garciaandres3d@gmail.com", "970baby");
+                    smtp.Credentials = new NetworkCredential("garciaandres3d@gmail.com", "Aagarciar2202");
                     smtp.Send(mail);
                 }
             }

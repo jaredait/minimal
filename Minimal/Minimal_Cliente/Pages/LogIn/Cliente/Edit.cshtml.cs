@@ -66,10 +66,10 @@ namespace Minimal_Cliente.Pages.LogIn.Cliente
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Tienda/Index");
         }
 
-        private bool CLIENTEExists(string id = "1710218475")
+        private bool CLIENTEExists(string id)
         {
             return _context.CLIENTE.Any(e => e.CLI_USUARIO == id);
         }
