@@ -40,14 +40,16 @@ namespace Minimal_Cliente.Models.Access
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 throw;
             }
         }
 
         private void RegistrarProductos(FACTURA factura, List<CARRITO> listaCarrito)
         {
-            // aqui seleccionar la factura que coincida el id del usuario y la fecha
-            FACTURA facturaTemp = _contexto.FACTURA.Where(f => f.CLI_USUARIO == factura.CLI_USUARIO).FirstOrDefault();
+            FACTURA facturaTemp = _contexto.FACTURA
+                                    .FromSqlRaw($"SELECT * FROM FACTURA WHERE FAC_FECHA = '{factura.FAC_FECHA}' AND CLI_USUARIO = '{factura.CLI_USUARIO}'")
+                                    .FirstOrDefault();
 
             foreach (CARRITO item in listaCarrito)
             {

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -18,6 +20,7 @@ namespace Minimal_Cliente.Pages.Prefactura
         public CarritoAccess carritoAccess;
         public Tipo_PagoAccess tipo_PagoAccess;
         public IFacturacionAccess facturacionAccess;
+        public IClienteAccess clienteAccess;
 
         public IndexModel(Minimal_Cliente.Data.Minimal_ClienteContext context)
         {
@@ -25,6 +28,7 @@ namespace Minimal_Cliente.Pages.Prefactura
             carritoAccess = new CarritoAccess(context);
             tipo_PagoAccess = new Tipo_PagoAccess(context);
             facturacionAccess = new FacturacionAccess(context);
+            clienteAccess = new ClienteAccess(context);
         }
 
         [BindProperty]
@@ -69,8 +73,31 @@ namespace Minimal_Cliente.Pages.Prefactura
             };
             facturacionAccess.RegistrarVenta(factura, ListaCarrito);
             carritoAccess.LimpiarCarrito(idUsuario);
+            //CLIENTE clienteTemp = clienteAccess.obtenerClientePorId(idUsuario);
+            //SendEmail(clienteTemp.CLI_NOMBRE, clienteTemp.CLI_EMAIL);
 
             return RedirectToPage("/Tienda/Index", new { miParametro = 99 });
+        }
+
+        public void SendEmail(string user, string email)
+        {
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress("garciaandres3d@gmail.com");
+                mail.To.Add(email);
+                mail.Subject = "Facturación electrónica";
+                mail.Body = $"<p>Hola {user},</p> " +
+                    $"<p>Tienes una nueva factura. Se encuentra disponible para su visualización y descarga.</p>" +
+                    $"<p>- Minimal.</p>";
+                mail.IsBodyHtml = true;
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.UseDefaultCredentials = false;
+                    smtp.EnableSsl = true;
+                    smtp.Credentials = new NetworkCredential("garciaandres3d@gmail.com", "Aagarciar2202");
+                    smtp.Send(mail);
+                }
+            }
         }
     }
 }
