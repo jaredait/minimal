@@ -83,5 +83,15 @@ namespace Minimal_Cliente.Models.Access
             _contexto.SaveChanges();
             return true;
         }
+
+        public void LimpiarCarrito(string id)
+        {
+            List<CARRITO> listaCarritoTemp = GetProductos(id);
+            foreach(CARRITO carritoTemp in listaCarritoTemp)
+            {
+                _contexto.CARRITO.Remove(carritoTemp);
+                _contexto.SaveChanges();
+            }
+        }
     }
 }

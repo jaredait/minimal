@@ -1,0 +1,126 @@
+﻿@page
+@model Minimal_Cliente.Pages.Prefactura.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Model.subtotal = 0;
+    Model.total = 0;
+}
+
+<h1>Detalle de compra</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].PRD_DESCRIPCION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].CAR_CANTIDAD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].PRD_PRECIO)
+            </th>
+            <th>
+                Precio total
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].PRD_PESO)
+                (lb)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ListaProductoCarrito)
+        {
+
+            Model.total += item.PRD_PRECIO * item.CAR_CANTIDAD;
+
+            <tr>
+                <td>
+                    <img src=@Url.Content("~/img/" + item.PRD_RUTA_IMAGEN) alt="imagen del producto"
+                         style="width: 100%; max-width: 100px; max-height: auto;" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PRD_DESCRIPCION)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CAR_CANTIDAD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PRD_PRECIO)
+                </td>
+                <td>
+                    $ @(item.PRD_PRECIO * item.CAR_CANTIDAD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PRD_PESO)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="container at-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <hr />
+            <table>
+                <thead>
+                    <tr>
+                        <th>IVA (12%): </th>
+                        <td>$@Math.Round(Model.total * 0.12M, 2)</td>
+                    </tr>
+                    <tr>
+                        <th>Subtotal: </th>
+                        <td>$@Math.Round(Model.total * 0.88M, 2)</td>
+                    </tr>
+                    <tr>
+                        <th>Total: </th>
+                        <td>$@Math.Round(Model.total, 2)</td>
+                    </tr>
+                </thead>
+            </table>
+            <hr />
+            <br />
+            <h3>Datos de pago</h3>
+            <br />
+            <form method="post">
+                <div class="col-md-3">
+                    <select asp-for="tipo_pago_seleccionado" asp-items="@(new SelectList(Model.ListaTipoPago, "TIP_ID", "TIP_DESC"))" class="dropdown"></select>
+                </div>
+                <input asp-for="idUsuario" type="hidden" />
+                <div class="mb-3">
+                    <label class="form-label" asp-for="tarjetaNumero">Número de tarjeta</label>
+                    <input type="text" asp-for="tarjetaNumero" class="form-control" />
+                    <span asp-validation-for="tarjetaNumero" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="tarjetaPropietario">Propietario</label>
+                    <input type="text" asp-for="tarjetaPropietario" class="form-control" />
+                    <span asp-validation-for="tarjetaPropietario" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="tarjetaFechaCaducidad">Fecha de caducidad</label>
+                    <input type="text" asp-for="tarjetaFechaCaducidad" class="form-control" />
+                    <span asp-validation-for="tarjetaFechaCaducidad" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="tarjetaCVV">CVV</label>
+                    <input type="text" asp-for="tarjetaCVV" class="form-control" />
+                    <span asp-validation-for="tarjetaCVV" class="text-danger"></span>
+                </div>
+                <div asp-validation-summary="All" class="text-danger">
+                </div>
+                <div class="mb-3" id="btn">
+                    <button type="submit" class="btn btn-info" onclick="almacenarIdEnForm()">Confirmar pago</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+

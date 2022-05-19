@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Minimal.Models;
 using Minimal_Cliente.Data;
+using Minimal_Cliente.Models;
 
 namespace Minimal_Cliente.Pages.LogIn.Cliente
 {

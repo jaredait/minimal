@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Minimal.Models;
 using Minimal_Cliente.Data;
+using Minimal_Cliente.Models;
 
 namespace Minimal_Cliente.Pages.LogIn.Cliente
 {

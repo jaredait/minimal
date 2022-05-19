@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Minimal.Models;
+using Minimal_Cliente.Models;
 using Minimal_Cliente.Models.Access;
 
 namespace Minimal_Cliente.Pages.LogIn

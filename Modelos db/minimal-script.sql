@@ -227,7 +227,7 @@ go
 /* Table: CARRITO                                               */
 /*==============================================================*/
 create table CARRITO (
-   CAR_ID               int					IDENTITY(1,1)                 not null,
+   CAR_ID               int                  IDENTITY(1,1)			not null,
    CLI_USUARIO          varchar(50)          not null,
    PRD_ID               varchar(25)          not null,
    CAR_CANTIDAD         int                  null,
@@ -769,10 +769,12 @@ go
 /* Table: DETALLE_FACTURA                                       */
 /*==============================================================*/
 create table DETALLE_FACTURA (
+   DET_ID               int                  IDENTITY(1,1)			not null,
    PRD_ID               varchar(25)          not null,
-   FAC_NUMERO           varchar(15)          not null,
+   FAC_NUMERO           int                  not null,
    DET_PRECIO_PRD       decimal(9,2)         not null,
-   DET_CANTIDAD         int                  not null
+   DET_CANTIDAD         int                  not null,
+   constraint PK_DETALLE_FACTURA primary key (DET_ID)
 )
 go
 
@@ -978,7 +980,7 @@ go
 /* Table: FACTURA                                               */
 /*==============================================================*/
 create table FACTURA (
-   FAC_NUMERO           varchar(15)          not null,
+   FAC_NUMERO           int                  IDENTITY(1,1)			not null,
    CLI_USUARIO          varchar(50)          not null,
    TIP_ID               varchar(15)          not null,
    ENV_NUMERO           varchar(15)          null,

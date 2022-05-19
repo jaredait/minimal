@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Minimal.Models
+namespace Minimal_Cliente.Models
 {
     public class FACTURA
     {
@@ -13,7 +13,7 @@ namespace Minimal.Models
         [MinLength(1, ErrorMessage = "Mínimo 1 caracter")]
         [MaxLength(15, ErrorMessage = "Máximo 15 caracteres")]
         [Display(Name = "Número de factura")]
-        public string FAC_NUMERO { get; set; }
+        public int FAC_NUMERO { get; set; }
 
         [Required]
         [MinLength(3, ErrorMessage = "Mínimo 3 caracteres")]

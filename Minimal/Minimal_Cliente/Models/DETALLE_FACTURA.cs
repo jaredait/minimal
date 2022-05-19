@@ -10,6 +10,12 @@ namespace Minimal.Models
     {
         [Key]
         [Required]
+        [Display(Name = "ID")]
+        [MinLength(1, ErrorMessage = "Mínimo 1 caracter")]
+        [MaxLength(25, ErrorMessage = "Máximo 25 caracteres")]
+        public int DET_ID { get; set; }
+
+        [Required]
         [Display(Name = "ID Producto")]
         [MinLength(1, ErrorMessage = "Mínimo 1 caracter")]
         [MaxLength(25, ErrorMessage = "Máximo 25 caracteres")]

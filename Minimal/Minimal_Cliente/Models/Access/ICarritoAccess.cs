@@ -15,5 +15,6 @@ namespace Minimal_Cliente.Models.Access
         bool CarritoExiste(CARRITO carritoExistente);
         void AgregarUno(CARRITO carritoSumar);
         bool EliminarProducto(int id);
+        void LimpiarCarrito(string id);
     }
 }

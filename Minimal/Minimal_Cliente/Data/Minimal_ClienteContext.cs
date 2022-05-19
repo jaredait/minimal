@@ -16,8 +16,13 @@ namespace Minimal_Cliente.Data
         }
 
         public DbSet<Minimal.Models.PRODUCTO> PRODUCTO { get; set; }
-        public DbSet<Minimal.Models.CLIENTE> CLIENTE { get; set; }
+        public DbSet<Minimal_Cliente.Models.CLIENTE> CLIENTE { get; set; }
         public DbSet<Minimal_Cliente.Models.CARRITO> CARRITO { get; set; }
+        public DbSet<Minimal_Cliente.Models.FACTURA> FACTURA { get; set; }
+        
+        public DbSet<Minimal_Cliente.Models.TIPO_PAGO> TIPO_PAGO { get; set; }
+        public DbSet<Minimal_Cliente.Models.ENVIO> ENVIO{ get; set; }
+
 
     }
 }

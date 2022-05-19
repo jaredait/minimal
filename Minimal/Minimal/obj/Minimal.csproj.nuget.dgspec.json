@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aandr\\source\\GitHub\\minimal\\Minimal\\Minimal\\Minimal.csproj": {}
+    "C:\\Users\\ASUS\\source\\repos\\minimal\\Minimal\\Minimal\\Minimal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aandr\\source\\GitHub\\minimal\\Minimal\\Minimal\\Minimal.csproj": {
+    "C:\\Users\\ASUS\\source\\repos\\minimal\\Minimal\\Minimal\\Minimal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aandr\\source\\GitHub\\minimal\\Minimal\\Minimal\\Minimal.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\minimal\\Minimal\\Minimal\\Minimal.csproj",
         "projectName": "Minimal",
-        "projectPath": "C:\\Users\\aandr\\source\\GitHub\\minimal\\Minimal\\Minimal\\Minimal.csproj",
-        "packagesPath": "C:\\Users\\aandr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aandr\\source\\GitHub\\minimal\\Minimal\\Minimal\\obj\\",
+        "projectPath": "C:\\Users\\ASUS\\source\\repos\\minimal\\Minimal\\Minimal\\Minimal.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ASUS\\source\\repos\\minimal\\Minimal\\Minimal\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\aandr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,6 +69,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.15, 5.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -73,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

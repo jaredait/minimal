@@ -3,12 +3,27 @@
 
 @{
     ViewData["Title"] = "Carrito";
+    string usuarioID = Model.ListaProductoCarrito[0].CLI_USUARIO;
 }
 
 <h1>Mi Carrito</h1>
+<br />
+
+<div class="btn btn-info" id="btn-pago">
+    <a asp-page="../Prefactura/Index" asp-route-id="@usuarioID" class="text-decoration-none" style="color: white;">Pagar</a>
+</div>
+<br />
+<br />
+
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].PRD_RUTA_IMAGEN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].PRD_DESCRIPCION)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].CAR_CANTIDAD)
             </th>
@@ -18,44 +33,44 @@
             <th>
                 @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].PRD_PESO)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].PRD_DESCRIPCION)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ListaProductoCarrito[0].PRD_RUTA_IMAGEN)
-            </th>
+
+
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.ListaProductoCarrito) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CAR_CANTIDAD)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PRD_PRECIO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PRD_PESO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PRD_DESCRIPCION)
-            </td>
-            <td>
-                <img src=@Url.Content("~/img/" + item.PRD_RUTA_IMAGEN) alt="imagen del producto"
-                     style="width: 100%; max-width: 100px; max-height: auto;" />
-            </td>
-            <td>
-                <div class="btn btn-primary" id="@item.CAR_ID" >
-                    <a asp-page="./Edit" asp-route-id="@item.CAR_ID" class="text-decoration-none" style="color: white;">Detalles</a>
-                </div>
-                <div class="btn btn-danger" id="@item.CAR_ID">
-                    <a id="@item.CAR_ID" asp-page="./Delete" asp-route-id="@item.CAR_ID" class="text-decoration-none eliminar" style="color: white;">Eliminar</a>
-                </div>
+        @foreach (var item in Model.ListaProductoCarrito)
+        {
+            <tr>
+                <td>
+                    <img src=@Url.Content("~/img/" + item.PRD_RUTA_IMAGEN) alt="imagen del producto"
+                         style="width: 100%; max-width: 100px; max-height: auto;" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PRD_DESCRIPCION)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CAR_CANTIDAD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PRD_PRECIO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PRD_PESO)
+                    (lb)
+                </td>
 
-            </td>
 
-        </tr>
-}
+                <td>
+                    <div class="btn btn-primary" id="@item.CAR_ID">
+                        <a asp-page="./Edit" asp-route-id="@item.CAR_ID" class="text-decoration-none" style="color: white;">Detalles</a>
+                    </div>
+                    <div class="btn btn-danger" id="@item.CAR_ID">
+                        <a id="@item.CAR_ID" asp-page="./Delete" asp-route-id="@item.CAR_ID" class="text-decoration-none eliminar" style="color: white;">Eliminar</a>
+                    </div>
+
+                </td>
+
+            </tr>
+        }
     </tbody>
 </table>
