@@ -68,8 +68,6 @@ namespace Minimal_Cliente.Pages.Prefactura
             {
                 CLI_USUARIO = ListaCarrito[0].CLI_USUARIO,
                 TIP_ID = tipo_pago_seleccionado,
-                FAC_MONTO_SUBTOTAL = subtotal,
-                FAC_MONTO_TOTAL = total
             };
             facturacionAccess.RegistrarVenta(factura, ListaCarrito);
             carritoAccess.LimpiarCarrito(idUsuario);

@@ -26,6 +26,8 @@ namespace Minimal_Cliente.Models.Access
             f.FAC_FECHA = DateTime.Now;
             f.FAC_DIRECCION_CLI = cliente.CLI_DIRECCION;
             f.FAC_EMAIL_CLI = cliente.CLI_EMAIL;
+            f.FAC_MONTO_TOTAL = ObtenerTotalListaCarrito(listaProductos);
+            f.FAC_MONTO_SUBTOTAL = Math.Round(f.FAC_MONTO_TOTAL * 0.88M, 2);
 
             try
             {
@@ -70,7 +72,7 @@ namespace Minimal_Cliente.Models.Access
             foreach (CARRITO item in listaCarrito)
             {
                 PRODUCTO productoTemp = _contexto.PRODUCTO.Where(p => p.PRD_ID == item.PRD_ID).FirstOrDefault();
-                total += productoTemp.PRD_PRECIO;
+                total += productoTemp.PRD_PRECIO * item.CAR_CANTIDAD;
             }
             return total;
         }
