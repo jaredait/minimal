@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Minimal.Data;
 using Minimal.Models;
 
-namespace Minimal.Pages.Factura
+namespace Minimal.Pages.Carrito
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace Minimal.Pages.Factura
         }
 
         [BindProperty]
-        public FACTURA FACTURA { get; set; }
+        public CARRITO CARRITO { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,9 +30,9 @@ namespace Minimal.Pages.Factura
                 return NotFound();
             }
 
-            FACTURA = await _context.FACTURA.FirstOrDefaultAsync(m => m.FAC_NUMERO == id);
+            CARRITO = await _context.CARRITO.FirstOrDefaultAsync(m => m.CAR_ID == id);
 
-            if (FACTURA == null)
+            if (CARRITO == null)
             {
                 return NotFound();
             }
@@ -48,7 +48,7 @@ namespace Minimal.Pages.Factura
                 return Page();
             }
 
-            _context.Attach(FACTURA).State = EntityState.Modified;
+            _context.Attach(CARRITO).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +56,7 @@ namespace Minimal.Pages.Factura
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!FACTURAExists(FACTURA.FAC_NUMERO))
+                if (!CARRITOExists(CARRITO.CAR_ID))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace Minimal.Pages.Factura
             return RedirectToPage("./Index");
         }
 
-        private bool FACTURAExists(int id)
+        private bool CARRITOExists(int id)
         {
-            return _context.FACTURA.Any(e => e.FAC_NUMERO == id);
+            return _context.CARRITO.Any(e => e.CAR_ID == id);
         }
     }
 }

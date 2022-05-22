@@ -11,15 +11,18 @@ namespace Minimal.Models
         [Key]
         [Required]
         [Display(Name = "ID Producto")]
+        public int DET_ID { get; set; }
+
+
+        [Required]
+        [Display(Name = "ID Producto")]
         [MinLength(1, ErrorMessage = "Mínimo 1 caracter")]
         [MaxLength(25, ErrorMessage = "Máximo 25 caracteres")]
         public string PRD_ID { get; set; }
         
         [Required]
         [Display(Name = "Número de factura")]
-        [MinLength(1, ErrorMessage = "Mínimo  caracter")]
-        [MaxLength(15, ErrorMessage = "Máximo 15 caracteres")]
-        public string FAC_NUMERO { get; set; }
+        public int FAC_NUMERO { get; set; }
         
         [Range(0, 9999999.99, ErrorMessage = "El precio debe estar entre 0 y 9999999.99")]
         [Display(Name = "Precio producto")]

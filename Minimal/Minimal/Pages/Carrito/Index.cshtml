@@ -1,0 +1,48 @@
+﻿@page
+@model Minimal.Pages.Carrito.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CARRITO[0].CLI_USUARIO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CARRITO[0].PRD_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CARRITO[0].CAR_CANTIDAD)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.CARRITO) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLI_USUARIO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRD_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CAR_CANTIDAD)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CAR_ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CAR_ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CAR_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

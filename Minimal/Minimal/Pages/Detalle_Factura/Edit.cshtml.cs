@@ -23,14 +23,14 @@ namespace Minimal.Pages.Detalle_Factura
         [BindProperty]
         public DETALLE_FACTURA DETALLE_FACTURA { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(string id)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            DETALLE_FACTURA = await _context.DETALLE_FACTURA.FirstOrDefaultAsync(m => m.PRD_ID == id);
+            DETALLE_FACTURA = await _context.DETALLE_FACTURA.FirstOrDefaultAsync(m => m.DET_ID == id);
 
             if (DETALLE_FACTURA == null)
             {
@@ -56,7 +56,7 @@ namespace Minimal.Pages.Detalle_Factura
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!DETALLE_FACTURAExists(DETALLE_FACTURA.PRD_ID))
+                if (!DETALLE_FACTURAExists(DETALLE_FACTURA.DET_ID))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace Minimal.Pages.Detalle_Factura
             return RedirectToPage("./Index");
         }
 
-        private bool DETALLE_FACTURAExists(string id)
+        private bool DETALLE_FACTURAExists(int id)
         {
-            return _context.DETALLE_FACTURA.Any(e => e.PRD_ID == id);
+            return _context.DETALLE_FACTURA.Any(e => e.DET_ID == id);
         }
     }
 }

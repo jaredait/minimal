@@ -22,7 +22,7 @@ namespace Minimal.Pages.Factura
         [BindProperty]
         public FACTURA FACTURA { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(string id)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {
@@ -38,7 +38,7 @@ namespace Minimal.Pages.Factura
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(string id)
+        public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (id == null)
             {

@@ -31,5 +31,7 @@ namespace Minimal.Data
         public DbSet<Minimal.Models.CATEGORIA_PRODUCTO> CATEGORIA_PRODUCTO { get; set; }
 
         public DbSet<Minimal.Models.PARAMETROS_GENERALES> PARAMETROS_GENERALES { get; set; }
+
+        public DbSet<Minimal.Models.CARRITO> CARRITO { get; set; }
     }
 }

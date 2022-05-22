@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Minimal.Data;
 using Minimal.Models;
 
-namespace Minimal.Pages.Detalle_Factura
+namespace Minimal.Pages.Carrito
 {
     public class DetailsModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace Minimal.Pages.Detalle_Factura
             _context = context;
         }
 
-        public DETALLE_FACTURA DETALLE_FACTURA { get; set; }
+        public CARRITO CARRITO { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,9 +28,9 @@ namespace Minimal.Pages.Detalle_Factura
                 return NotFound();
             }
 
-            DETALLE_FACTURA = await _context.DETALLE_FACTURA.FirstOrDefaultAsync(m => m.DET_ID == id);
+            CARRITO = await _context.CARRITO.FirstOrDefaultAsync(m => m.CAR_ID == id);
 
-            if (DETALLE_FACTURA == null)
+            if (CARRITO == null)
             {
                 return NotFound();
             }

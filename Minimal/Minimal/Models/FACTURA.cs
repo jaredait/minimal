@@ -10,10 +10,8 @@ namespace Minimal.Models
     {
         [Key]
         [Required]
-        [MinLength(1, ErrorMessage = "Mínimo 1 caracter")]
-        [MaxLength(15, ErrorMessage = "Máximo 15 caracteres")]
         [Display(Name = "Número de factura")]
-        public string FAC_NUMERO { get; set; }
+        public int FAC_NUMERO { get; set; }
 
         [Required]
         [MinLength(3, ErrorMessage = "Mínimo 3 caracteres")]
