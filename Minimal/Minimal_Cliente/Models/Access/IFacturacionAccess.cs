@@ -8,5 +8,6 @@ namespace Minimal_Cliente.Models.Access
     public interface IFacturacionAccess
     {
         void RegistrarVenta(FACTURA factura, List<CARRITO> listaProductos);
+        decimal ObtenerTotalListaCarrito(List<CARRITO> listaCarrito);
     }
 }

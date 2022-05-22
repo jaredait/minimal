@@ -73,28 +73,40 @@ namespace Minimal_Cliente.Pages.Prefactura
             };
             facturacionAccess.RegistrarVenta(factura, ListaCarrito);
             carritoAccess.LimpiarCarrito(idUsuario);
-            //CLIENTE clienteTemp = clienteAccess.obtenerClientePorId(idUsuario);
-            //SendEmail(clienteTemp.CLI_NOMBRE, clienteTemp.CLI_EMAIL);
+            CLIENTE clienteTemp = clienteAccess.obtenerClientePorId(idUsuario);
+            SendEmail(clienteTemp.CLI_NOMBRE, clienteTemp.CLI_EMAIL, CrearContenidoEmail(factura));
 
             return RedirectToPage("/Tienda/Index", new { miParametro = 99 });
         }
 
-        public void SendEmail(string user, string email)
+        private string CrearContenidoEmail(FACTURA f)
+        {
+            string contenido = 
+                    $"<p>Te informamos de una nueva compra.</p>" +
+                    $"<p>Fecha y hora: {DateTime.Now.ToShortDateString()} {DateTime.Now.ToShortTimeString()}</p>" +
+                    $"<p>Transacción: Compra comercio electrónico Minimal Streetwear</p>" +
+                    $"<p><b>Detalle</b></p>" +
+                    $"<p><b>Valor: </b>USD {Math.Round(facturacionAccess.ObtenerTotalListaCarrito(ListaCarrito), 2)}</p>" +
+                    $"<p></p>" +
+                    $"<p>- Minimal.</p>";
+
+            return contenido;
+        }
+
+        public void SendEmail(string user, string email, string contenido)
         {
             using (MailMessage mail = new MailMessage())
             {
-                mail.From = new MailAddress("garciaandres3d@gmail.com");
+                mail.From = new MailAddress("soyminimalstreetwear@gmail.com");
                 mail.To.Add(email);
                 mail.Subject = "Facturación electrónica";
-                mail.Body = $"<p>Hola {user},</p> " +
-                    $"<p>Tienes una nueva factura. Se encuentra disponible para su visualización y descarga.</p>" +
-                    $"<p>- Minimal.</p>";
+                mail.Body = $"<p>Hola {user},</p> " + contenido;
                 mail.IsBodyHtml = true;
                 using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
                     smtp.UseDefaultCredentials = false;
                     smtp.EnableSsl = true;
-                    smtp.Credentials = new NetworkCredential("garciaandres3d@gmail.com", "Aagarciar2202");
+                    smtp.Credentials = new NetworkCredential("soyminimalstreetwear@gmail.com", "proyectosusy2022");
                     smtp.Send(mail);
                 }
             }

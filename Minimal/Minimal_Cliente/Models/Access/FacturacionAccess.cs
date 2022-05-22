@@ -63,5 +63,16 @@ namespace Minimal_Cliente.Models.Access
                 }
             }
         }
+
+        public decimal ObtenerTotalListaCarrito(List<CARRITO> listaCarrito)
+        {
+            decimal total = 0M;
+            foreach (CARRITO item in listaCarrito)
+            {
+                PRODUCTO productoTemp = _contexto.PRODUCTO.Where(p => p.PRD_ID == item.PRD_ID).FirstOrDefault();
+                total += productoTemp.PRD_PRECIO;
+            }
+            return total;
+        }
     }
 }
