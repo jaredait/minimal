@@ -7,36 +7,33 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Minimal.Data;
+using Minimal.DataAccess;
 using Minimal.Models;
+using Minimal.ViewModels;
 
 namespace Minimal.Pages.Factura
 {
     public class EditModel : PageModel
     {
         private readonly Minimal.Data.MinimalContext _context;
+        private IDetalle_FacturaAccess detalle_FacturaAccess { get; set; }
+        private IFacturaAccess facturaAccess{ get; set; }
 
         public EditModel(Minimal.Data.MinimalContext context)
         {
             _context = context;
+            facturaDetalleViewModel = new FacturaDetalleViewModel();
+            detalle_FacturaAccess = new Detalle_FacturaAccess(context);
+            facturaAccess = new FacturaAccess(context);
         }
 
         [BindProperty]
-        public FACTURA FACTURA { get; set; }
+        public FacturaDetalleViewModel facturaDetalleViewModel { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public void OnGet(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            FACTURA = await _context.FACTURA.FirstOrDefaultAsync(m => m.FAC_NUMERO == id);
-
-            if (FACTURA == null)
-            {
-                return NotFound();
-            }
-            return Page();
+            facturaDetalleViewModel.Factura = facturaAccess.ObtenerFacturaPorId(id);
+            facturaDetalleViewModel.Detalle_Factura = (List<DETALLE_FACTURA>)detalle_FacturaAccess.ObtenerDetallaPorFacturaId(id);
         }
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -48,7 +45,7 @@ namespace Minimal.Pages.Factura
                 return Page();
             }
 
-            _context.Attach(FACTURA).State = EntityState.Modified;
+            _context.Attach(facturaDetalleViewModel.Factura).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +53,7 @@ namespace Minimal.Pages.Factura
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!FACTURAExists(FACTURA.FAC_NUMERO))
+                if (!FACTURAExists(facturaDetalleViewModel.Factura.FAC_NUMERO))
                 {
                     return NotFound();
                 }

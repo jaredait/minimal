@@ -7,52 +7,52 @@
 
 <h1>Edit</h1>
 
-<h4>FACTURA</h4>
+<h4>Cabecera</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="FACTURA.FAC_NUMERO" />
+            <input type="hidden" asp-for="facturaDetalleViewModel.Factura.FAC_NUMERO" />
             <div class="form-group">
-                <label asp-for="FACTURA.CLI_USUARIO" class="control-label"></label>
-                <input asp-for="FACTURA.CLI_USUARIO" class="form-control" />
-                <span asp-validation-for="FACTURA.CLI_USUARIO" class="text-danger"></span>
+                <label asp-for="facturaDetalleViewModel.Factura.CLI_USUARIO" class="control-label"></label>
+                <input asp-for="facturaDetalleViewModel.Factura.CLI_USUARIO" class="form-control" />
+                <span asp-validation-for="facturaDetalleViewModel.Factura.CLI_USUARIO" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FACTURA.TIP_ID" class="control-label"></label>
-                <input asp-for="FACTURA.TIP_ID" class="form-control" />
-                <span asp-validation-for="FACTURA.TIP_ID" class="text-danger"></span>
+                <label asp-for="facturaDetalleViewModel.Factura.TIP_ID" class="control-label"></label>
+                <input asp-for="facturaDetalleViewModel.Factura.TIP_ID" class="form-control" />
+                <span asp-validation-for="facturaDetalleViewModel.Factura.TIP_ID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FACTURA.ENV_NUMERO" class="control-label"></label>
-                <input asp-for="FACTURA.ENV_NUMERO" class="form-control" />
-                <span asp-validation-for="FACTURA.ENV_NUMERO" class="text-danger"></span>
+                <label asp-for="facturaDetalleViewModel.Factura.ENV_NUMERO" class="control-label"></label>
+                <input asp-for="facturaDetalleViewModel.Factura.ENV_NUMERO" class="form-control" />
+                <span asp-validation-for="facturaDetalleViewModel.Factura.ENV_NUMERO" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FACTURA.FAC_FECHA" class="control-label"></label>
-                <input asp-for="FACTURA.FAC_FECHA" class="form-control" />
-                <span asp-validation-for="FACTURA.FAC_FECHA" class="text-danger"></span>
+                <label asp-for="facturaDetalleViewModel.Factura.FAC_FECHA" class="control-label"></label>
+                <input asp-for="facturaDetalleViewModel.Factura.FAC_FECHA" class="form-control" />
+                <span asp-validation-for="facturaDetalleViewModel.Factura.FAC_FECHA" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FACTURA.FAC_DIRECCION_CLI" class="control-label"></label>
-                <input asp-for="FACTURA.FAC_DIRECCION_CLI" class="form-control" />
-                <span asp-validation-for="FACTURA.FAC_DIRECCION_CLI" class="text-danger"></span>
+                <label asp-for="facturaDetalleViewModel.Factura.FAC_DIRECCION_CLI" class="control-label"></label>
+                <input asp-for="facturaDetalleViewModel.Factura.FAC_DIRECCION_CLI" class="form-control" />
+                <span asp-validation-for="facturaDetalleViewModel.Factura.FAC_DIRECCION_CLI" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FACTURA.FAC_EMAIL_CLI" class="control-label"></label>
-                <input asp-for="FACTURA.FAC_EMAIL_CLI" class="form-control" />
-                <span asp-validation-for="FACTURA.FAC_EMAIL_CLI" class="text-danger"></span>
+                <label asp-for="facturaDetalleViewModel.Factura.FAC_EMAIL_CLI" class="control-label"></label>
+                <input asp-for="facturaDetalleViewModel.Factura.FAC_EMAIL_CLI" class="form-control" />
+                <span asp-validation-for="facturaDetalleViewModel.Factura.FAC_EMAIL_CLI" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FACTURA.FAC_MONTO_SUBTOTAL" class="control-label"></label>
-                <input asp-for="FACTURA.FAC_MONTO_SUBTOTAL" class="form-control" />
-                <span asp-validation-for="FACTURA.FAC_MONTO_SUBTOTAL" class="text-danger"></span>
+                <label asp-for="facturaDetalleViewModel.Factura.FAC_MONTO_SUBTOTAL" class="control-label"></label>
+                <input asp-for="facturaDetalleViewModel.Factura.FAC_MONTO_SUBTOTAL" class="form-control" />
+                <span asp-validation-for="facturaDetalleViewModel.Factura.FAC_MONTO_SUBTOTAL" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FACTURA.FAC_MONTO_TOTAL" class="control-label"></label>
-                <input asp-for="FACTURA.FAC_MONTO_TOTAL" class="form-control" />
-                <span asp-validation-for="FACTURA.FAC_MONTO_TOTAL" class="text-danger"></span>
+                <label asp-for="facturaDetalleViewModel.Factura.FAC_MONTO_TOTAL" class="control-label"></label>
+                <input asp-for="facturaDetalleViewModel.Factura.FAC_MONTO_TOTAL" class="form-control" />
+                <span asp-validation-for="facturaDetalleViewModel.Factura.FAC_MONTO_TOTAL" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -60,6 +60,53 @@
         </form>
     </div>
 </div>
+
+<br />
+<h4>Detalle</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.facturaDetalleViewModel.Detalle_Factura[0].PRD_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.facturaDetalleViewModel.Detalle_Factura[0].FAC_NUMERO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.facturaDetalleViewModel.Detalle_Factura[0].DET_PRECIO_PRD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.facturaDetalleViewModel.Detalle_Factura[0].DET_CANTIDAD)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.facturaDetalleViewModel.Detalle_Factura)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PRD_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FAC_NUMERO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DET_PRECIO_PRD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DET_CANTIDAD)
+                </td>
+                <td>
+                    <a asp-page="/Detalle_Factura/Edit" asp-route-id="@item.DET_ID">Edit</a> |
+                    <a asp-page="/Detalle_Factura/Details" asp-route-id="@item.DET_ID">Details</a> |
+                    <a asp-page="/Detalle_Factura/Delete" asp-route-id="@item.DET_ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
 
 <div>
     <a asp-page="./Index">Back to List</a>
