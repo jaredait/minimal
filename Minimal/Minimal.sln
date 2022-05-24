@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minimal", "Minimal\Minimal.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minimal_Cliente", "Minimal_Cliente\Minimal_Cliente.csproj", "{1CF675B3-C25B-455E-88BC-C0B338C1997B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xUnitMinimal", "xUnitMinimal\xUnitMinimal.csproj", "{2557AA9F-4CB9-4655-8747-8AF87FB9F957}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1CF675B3-C25B-455E-88BC-C0B338C1997B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CF675B3-C25B-455E-88BC-C0B338C1997B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CF675B3-C25B-455E-88BC-C0B338C1997B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2557AA9F-4CB9-4655-8747-8AF87FB9F957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2557AA9F-4CB9-4655-8747-8AF87FB9F957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2557AA9F-4CB9-4655-8747-8AF87FB9F957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2557AA9F-4CB9-4655-8747-8AF87FB9F957}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
