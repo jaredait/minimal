@@ -49,16 +49,18 @@ namespace Minimal_Cliente.Pages.LogIn.Cliente
         {
             using(MailMessage mail = new MailMessage())
             {
-                mail.From = new MailAddress("garciaandres3d@gmail.com");
+                mail.From = new MailAddress("soyminimalstreetwear@gmail.com");
                 mail.To.Add(email);
                 mail.Subject = "Usuario y Contraseña Minimal";
-                mail.Body = $"Hola {user}, la clave para que pueda ingresar a Minimal es la siguiente: {contrasena}. </br> Una vez que haya ingresado podrá cambiar su clave.";
+                mail.Body = $"Hola {user}, Gracias por formar parte de Minimal </br> " +
+                    $"Su contraseña temporal de ingreso es: {contrasena}. </br> " +
+                    $"Por su seguridad, una vez ingrese al sistema cambie su contraseña.";
                 mail.IsBodyHtml = true;
                 using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
                     smtp.UseDefaultCredentials = false;
                     smtp.EnableSsl = true;
-                    smtp.Credentials = new NetworkCredential("garciaandres3d@gmail.com", "Aagarciar2202");
+                    smtp.Credentials = new NetworkCredential("soyminimalstreetwear@gmail.com", "proyectosusy2022");
                     smtp.Send(mail);
                 }
             }

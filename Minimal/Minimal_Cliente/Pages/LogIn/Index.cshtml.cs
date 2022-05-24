@@ -23,6 +23,8 @@ namespace Minimal_Cliente.Pages.LogIn
             sessionAccess = new SessionAccess(context);
         }
         public CLIENTE cliente { get; set; }
+        [BindProperty]
+        public string nombreUsuario { get; set; }
 
         [BindProperty]
         public Credencial Credencial { get; set; }
@@ -34,14 +36,22 @@ namespace Minimal_Cliente.Pages.LogIn
         public void OnGet()
         {
         }
+        public string obtenerUsuario()
+        {
+            string cli_usuario = Credencial.Usuario;
+            string cli_contrasena = Credencial.Contrasena;
+            cliente = sessionAccess.getClientePorId(cli_usuario, cli_contrasena);
+            return cliente.CLI_NOMBRE.ToString();
+        }
         public IActionResult OnPost()
         {
             string cli_usuario = Credencial.Usuario;
             string cli_contrasena = Credencial.Contrasena;
             cliente = sessionAccess.getClientePorId(cli_usuario , cli_contrasena);
+             //nombreUsuario = obtenerUsuario();
             if (cliente != null)
             {
-                return RedirectToPage("/Tienda/Index", new { miParametro = 99}) ;
+                return RedirectToPage("/Tienda/Index", new { id = Credencial.Usuario}) ;
             }
             else
             {

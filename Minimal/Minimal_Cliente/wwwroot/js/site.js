@@ -26,6 +26,16 @@ function almacenarSesion() {
     localStorage.setItem('sesionActiva', usuario);
 }
 
+function almacenarNombre() {
+    let nombre = document.querySelector('#nombreUsuario').value;
+    localStorage.setItem('usuarioActivo', nombre);
+}
+
+function almacenar(item) {
+    almacenarSesion();
+    obtenerUsuarioTiendaIndex(this.item);
+}
+
 function eliminarSesion() {
     localStorage.removeItem('sesionActiva');
 }
@@ -50,6 +60,11 @@ function obtenerUsuarioCarrito(item) {
 function obtenerUsuarioPerfilDetalle(item) {
     let idUsuario = obtenerIdUsuario();
     item.setAttribute("href", `/LogIn/Cliente/Details?id=${idUsuario}`);
+}
+
+function obtenerUsuarioTiendaIndex(item) {
+    let idUsuario = obtenerIdUsuario();
+    item.setAttribute("href", `/Tienda/Index?id=${idUsuario}`);
 }
 
 function obtenerUsuarioPerfilEdit(item) {

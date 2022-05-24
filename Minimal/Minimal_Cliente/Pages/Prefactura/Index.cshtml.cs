@@ -74,7 +74,7 @@ namespace Minimal_Cliente.Pages.Prefactura
             CLIENTE clienteTemp = clienteAccess.obtenerClientePorId(idUsuario);
             SendEmail(clienteTemp.CLI_NOMBRE, clienteTemp.CLI_EMAIL, CrearContenidoEmail(factura));
 
-            return RedirectToPage("/Tienda/Index", new { miParametro = 99 });
+            return RedirectToPage("/Tienda/Index", new { id });
         }
 
         private string CrearContenidoEmail(FACTURA f)

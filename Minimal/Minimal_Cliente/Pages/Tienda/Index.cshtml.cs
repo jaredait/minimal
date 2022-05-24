@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Minimal.Models;
 using Minimal_Cliente.Data;
+using Minimal_Cliente.Models;
 
 namespace Minimal_Cliente.Pages.Tienda
 {
@@ -18,12 +19,21 @@ namespace Minimal_Cliente.Pages.Tienda
         {
             _context = context;
         }
-
+        public string nombreUsuario { get; set; }
         public IList<PRODUCTO> listaProductos { get;set; }
+        public CLIENTE CLIENTE { get; private set; }
 
-        public async Task OnGetAsync()
+        
+        public async Task OnGetAsync(string id)
         {
             listaProductos = await _context.PRODUCTO.ToListAsync();
+            
+            if (!String.IsNullOrEmpty(id))
+            {
+                string id2 = id;
+                CLIENTE = await _context.CLIENTE.FirstOrDefaultAsync(m => m.CLI_USUARIO == id);
+                nombreUsuario = CLIENTE.CLI_NOMBRE;
+            }
         }
     }
 }

@@ -4,9 +4,18 @@
 @{
     ViewData["Title"] = "Tienda";
 }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Minimal</title>
+</head>
 
 <h1>Productos</h1>
-
+<input asp-for="nombreUsuario" type="hidden" />
 
 <div class="card-columns">
     @foreach (var producto in Model.listaProductos)
@@ -16,7 +25,7 @@
                 <img class="card-img-top" src=@Url.Content("~/img/" + producto.PRD_RUTA_IMAGEN) alt="Imagen de la tarjeta"
                      style="width: 100%; max-width: 100px; max-height: auto;">
             </div>
-            
+
             <div class="card-body">
                 <h5 class="card-title">@producto.PRD_NOMBRE</h5>
                 <p class="card-text texto">@producto.PRD_PRECIO</p>
@@ -27,3 +36,10 @@
         </div>
     }
 </div>
+<script>
+
+    let miNombre = document.querySelector("#nombreUsuario").value;
+    let miMenu = document.querySelector("#dropdownMenuButton");
+    miMenu.textContent = miNombre;
+
+</script>
